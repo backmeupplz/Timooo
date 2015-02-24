@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D142A9D92D8B9F1DC369F31 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F28620950E097CC430C274 /* libPods.a */; };
 		B33579051A9C246D002BF317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33579041A9C246D002BF317 /* AppDelegate.swift */; };
 		B33579071A9C246D002BF317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33579061A9C246D002BF317 /* ViewController.swift */; };
 		B335790A1A9C246D002BF317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33579081A9C246D002BF317 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2885F9B52A4DD9AF7CDBFE78 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AD9B7C2F2193E313BA43D9D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B33578FF1A9C246D002BF317 /* Timooo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timooo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33579031A9C246D002BF317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B33579041A9C246D002BF317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,8 @@
 		B33579141A9C246D002BF317 /* TimoooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimoooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33579191A9C246D002BF317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B335791A1A9C246D002BF317 /* TimoooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimoooTests.swift; sourceTree = "<group>"; };
+		B33579241A9C2521002BF317 /* Timooo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Timooo-Bridging-Header.h"; sourceTree = "<group>"; };
+		D3F28620950E097CC430C274 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D142A9D92D8B9F1DC369F31 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0009E667C30A245F833288D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3F28620950E097CC430C274 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B33578F61A9C246D002BF317 = {
 			isa = PBXGroup;
 			children = (
 				B33579011A9C246D002BF317 /* Timooo */,
 				B33579171A9C246D002BF317 /* TimoooTests */,
 				B33579001A9C246D002BF317 /* Products */,
+				CA8FE6B6EA7CFAAB613AE054 /* Pods */,
+				0009E667C30A245F833288D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +93,12 @@
 		B33579011A9C246D002BF317 /* Timooo */ = {
 			isa = PBXGroup;
 			children = (
-				B33579041A9C246D002BF317 /* AppDelegate.swift */,
-				B33579061A9C246D002BF317 /* ViewController.swift */,
-				B33579081A9C246D002BF317 /* Main.storyboard */,
-				B335790B1A9C246D002BF317 /* Images.xcassets */,
-				B335790D1A9C246D002BF317 /* LaunchScreen.xib */,
+				B335792B1A9C26FA002BF317 /* UI */,
+				B335792A1A9C26F1002BF317 /* Controller */,
+				B33579291A9C26EE002BF317 /* Model */,
+				B33579281A9C26E9002BF317 /* View */,
 				B33579021A9C246D002BF317 /* Supporting Files */,
+				B335790B1A9C246D002BF317 /* Images.xcassets */,
 			);
 			path = Timooo;
 			sourceTree = "<group>";
@@ -91,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				B33579031A9C246D002BF317 /* Info.plist */,
+				B33579241A9C2521002BF317 /* Timooo-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -112,6 +129,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B33579281A9C26E9002BF317 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B33579291A9C26EE002BF317 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B33579041A9C246D002BF317 /* AppDelegate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B335792A1A9C26F1002BF317 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B33579061A9C246D002BF317 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B335792B1A9C26FA002BF317 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B33579081A9C246D002BF317 /* Main.storyboard */,
+				B335790D1A9C246D002BF317 /* LaunchScreen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		CA8FE6B6EA7CFAAB613AE054 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2885F9B52A4DD9AF7CDBFE78 /* Pods.debug.xcconfig */,
+				AD9B7C2F2193E313BA43D9D2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B335791E1A9C246D002BF317 /* Build configuration list for PBXNativeTarget "Timooo" */;
 			buildPhases = (
+				F36343426635A9F0744F2958 /* Check Pods Manifest.lock */,
 				B33578FB1A9C246D002BF317 /* Sources */,
 				B33578FC1A9C246D002BF317 /* Frameworks */,
 				B33578FD1A9C246D002BF317 /* Resources */,
+				78363B971A157164608F5C4F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +266,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78363B971A157164608F5C4F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F36343426635A9F0744F2958 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B33578FB1A9C246D002BF317 /* Sources */ = {
@@ -336,21 +429,28 @@
 		};
 		B335791F1A9C246D002BF317 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2885F9B52A4DD9AF7CDBFE78 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Timooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Timooo/Timooo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B33579201A9C246D002BF317 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD9B7C2F2193E313BA43D9D2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Timooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Timooo/Timooo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +507,7 @@
 				B33579201A9C246D002BF317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B33579211A9C246D002BF317 /* Build configuration list for PBXNativeTarget "TimoooTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +516,7 @@
 				B33579231A9C246D002BF317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
