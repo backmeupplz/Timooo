@@ -168,27 +168,79 @@
                                     <constraint firstAttribute="centerY" secondItem="mrX-Zw-F75" secondAttribute="centerY" id="v3l-5h-0S1"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qv-4L-uAW">
+                                <rect key="frame" x="0.0" y="20" width="38" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Zf2-eC-rTi"/>
+                                    <constraint firstAttribute="width" constant="38" id="v65-7K-OQB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="icon_side">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CN-hG-xzL">
+                                <rect key="frame" x="263" y="20" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="1ga-Mo-ETf"/>
+                                    <constraint firstAttribute="width" constant="37" id="C1i-ot-2VW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="NzD-We-N2f"/>
+                                    <constraint firstAttribute="height" constant="37" id="hR5-nI-sRa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="icon_sound">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="icon_sound_off"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1ga-Mo-ETf"/>
+                                        <exclude reference="NzD-We-N2f"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-eT-kUS" userLabel="Options View">
+                                <rect key="frame" x="256" y="157" width="36" height="285"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="AVs-s9-pUf"/>
+                                    <constraint firstAttribute="height" constant="285" id="HmV-1J-TwD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92156862745098034" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="LCl-eT-kUS" secondAttribute="centerY" id="04i-ea-5au"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="udl-0x-F6L" secondAttribute="bottom" id="1kn-o5-DEz"/>
                             <constraint firstAttribute="centerY" secondItem="tKd-H6-e5B" secondAttribute="centerY" id="5FD-ij-bR1"/>
                             <constraint firstItem="tKd-H6-e5B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="7y2-Gq-QrB"/>
                             <constraint firstItem="pjh-pX-zmz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8UV-LA-9SE"/>
+                            <constraint firstAttribute="width" secondItem="LCl-eT-kUS" secondAttribute="height" multiplier="20:19" id="8lp-P9-cXi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tKd-H6-e5B" secondAttribute="trailing" constant="36" id="DYb-Is-Vjq"/>
                             <constraint firstAttribute="width" secondItem="udl-0x-F6L" secondAttribute="height" multiplier="150:101" id="F93-m0-gDk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tKd-H6-e5B" secondAttribute="bottom" constant="105" id="Fby-1p-q8E"/>
                             <constraint firstItem="pjh-pX-zmz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="67:150" id="HKe-Br-KkP"/>
+                            <constraint firstItem="7Qv-4L-uAW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="J8z-mL-PNA"/>
                             <constraint firstAttribute="centerX" secondItem="pjh-pX-zmz" secondAttribute="centerX" id="Koz-gv-Br0"/>
                             <constraint firstAttribute="centerX" secondItem="tKd-H6-e5B" secondAttribute="centerX" id="Lgy-QB-psz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LCl-eT-kUS" secondAttribute="trailing" constant="-8" id="MIS-Xc-4sB"/>
                             <constraint firstItem="pjh-pX-zmz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="OWL-Zu-uea"/>
                             <constraint firstItem="tKd-H6-e5B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="Od0-tv-xHl"/>
                             <constraint firstItem="tKd-H6-e5B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="49:150" id="OmB-cT-qZY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3CN-hG-xzL" secondAttribute="trailing" constant="-16" id="RQJ-Hp-63g"/>
+                            <constraint firstItem="7Qv-4L-uAW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="UWt-G4-WrR"/>
                             <constraint firstItem="tKd-H6-e5B" firstAttribute="top" secondItem="pjh-pX-zmz" secondAttribute="bottom" id="WRn-ni-q4l"/>
                             <constraint firstAttribute="centerX" secondItem="udl-0x-F6L" secondAttribute="centerX" id="a64-zK-fHn"/>
+                            <constraint firstItem="LCl-eT-kUS" firstAttribute="leading" secondItem="tKd-H6-e5B" secondAttribute="trailing" constant="8" id="aZj-Sp-6Y6"/>
                             <constraint firstItem="tKd-H6-e5B" firstAttribute="top" secondItem="pjh-pX-zmz" secondAttribute="bottom" id="bh5-3b-1e0"/>
+                            <constraint firstItem="3CN-hG-xzL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gfu-uU-eOL"/>
+                            <constraint firstItem="LCl-eT-kUS" firstAttribute="leading" secondItem="mrX-Zw-F75" secondAttribute="trailing" constant="-54" id="nJ5-lF-lnA"/>
                             <constraint firstAttribute="height" secondItem="udl-0x-F6L" secondAttribute="height" multiplier="600:202" id="oQx-wH-vWK"/>
                             <constraint firstItem="pjh-pX-zmz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qAr-Ga-aio"/>
+                            <constraint firstAttribute="rightMargin" secondItem="LCl-eT-kUS" secondAttribute="right" constant="-8" id="r7e-ML-Kc7"/>
+                            <constraint firstItem="LCl-eT-kUS" firstAttribute="leading" secondItem="tKd-H6-e5B" secondAttribute="trailing" constant="8" id="sWr-RC-2h3"/>
                             <constraint firstItem="pjh-pX-zmz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="z5a-Qe-shH"/>
                         </constraints>
                         <variation key="default">
@@ -201,6 +253,11 @@
                                 <exclude reference="Od0-tv-xHl"/>
                                 <exclude reference="WRn-ni-q4l"/>
                                 <exclude reference="bh5-3b-1e0"/>
+                                <exclude reference="8lp-P9-cXi"/>
+                                <exclude reference="aZj-Sp-6Y6"/>
+                                <exclude reference="nJ5-lF-lnA"/>
+                                <exclude reference="r7e-ML-Kc7"/>
+                                <exclude reference="sWr-RC-2h3"/>
                                 <exclude reference="F93-m0-gDk"/>
                                 <exclude reference="Fby-1p-q8E"/>
                             </mask>
@@ -211,12 +268,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="317"/>
         </scene>
     </scenes>
     <resources>
         <image name="icon_next" width="85" height="82"/>
         <image name="icon_pause" width="64" height="85"/>
         <image name="icon_play" width="71" height="85"/>
+        <image name="icon_side" width="85" height="60"/>
+        <image name="icon_sound" width="85" height="85"/>
+        <image name="icon_sound_off" width="85" height="85"/>
         <image name="icon_stop" width="85" height="85"/>
     </resources>
 </document>
