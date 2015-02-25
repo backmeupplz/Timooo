@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		5D142A9D92D8B9F1DC369F31 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F28620950E097CC430C274 /* libPods.a */; };
 		B33579051A9C246D002BF317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33579041A9C246D002BF317 /* AppDelegate.swift */; };
-		B33579071A9C246D002BF317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33579061A9C246D002BF317 /* ViewController.swift */; };
+		B33579071A9C246D002BF317 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33579061A9C246D002BF317 /* MainViewController.swift */; };
 		B335790A1A9C246D002BF317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33579081A9C246D002BF317 /* Main.storyboard */; };
 		B335790C1A9C246D002BF317 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B335790B1A9C246D002BF317 /* Images.xcassets */; };
 		B335790F1A9C246D002BF317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B335790D1A9C246D002BF317 /* LaunchScreen.xib */; };
 		B335791B1A9C246D002BF317 /* TimoooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335791A1A9C246D002BF317 /* TimoooTests.swift */; };
+		B3B5A71B1A9D56A900F69A5D /* TimerCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,7 @@
 		B33578FF1A9C246D002BF317 /* Timooo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timooo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33579031A9C246D002BF317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B33579041A9C246D002BF317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B33579061A9C246D002BF317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B33579061A9C246D002BF317 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B33579091A9C246D002BF317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B335790B1A9C246D002BF317 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B335790E1A9C246D002BF317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		B33579191A9C246D002BF317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B335791A1A9C246D002BF317 /* TimoooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimoooTests.swift; sourceTree = "<group>"; };
 		B33579241A9C2521002BF317 /* Timooo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Timooo-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCircle.swift; sourceTree = "<group>"; };
 		D3F28620950E097CC430C274 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 		B33579281A9C26E9002BF317 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -147,7 +150,7 @@
 		B335792A1A9C26F1002BF317 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B33579061A9C246D002BF317 /* ViewController.swift */,
+				B33579061A9C246D002BF317 /* MainViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -305,7 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B33579071A9C246D002BF317 /* ViewController.swift in Sources */,
+				B33579071A9C246D002BF317 /* MainViewController.swift in Sources */,
+				B3B5A71B1A9D56A900F69A5D /* TimerCircle.swift in Sources */,
 				B33579051A9C246D002BF317 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
