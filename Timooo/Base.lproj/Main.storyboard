@@ -23,10 +23,40 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A97-6i-MXo" customClass="TimerCircle" customModule="Timooo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="97" width="196" height="196"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30:00" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mc1-99-Ozm" customClass="TimerLabel" customModule="Timooo" customModuleProvider="target">
+                                                <rect key="frame" x="33" y="33" width="131" height="131"/>
+                                                <color key="backgroundColor" red="0.90588241820000004" green="0.090196080509999998" blue="0.11372549830000001" alpha="1" colorSpace="deviceRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mc1-99-Ozm" secondAttribute="height" multiplier="131:62" constant="-145.79032258064512" id="D4o-2M-A3y"/>
+                                                    <constraint firstAttribute="width" secondItem="mc1-99-Ozm" secondAttribute="height" multiplier="1:1" id="xcL-Rg-2Pb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="45"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="D4o-2M-A3y"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="mc1-99-Ozm" secondAttribute="height" multiplier="98:31" constant="-218.12903225806451" id="Hvr-bg-Mr9"/>
+                                            <constraint firstAttribute="centerX" secondItem="mc1-99-Ozm" secondAttribute="centerX" id="LdP-kC-5Sw"/>
+                                            <constraint firstAttribute="width" secondItem="mc1-99-Ozm" secondAttribute="height" multiplier="196:131" id="NoN-FK-PJO"/>
                                             <constraint firstAttribute="width" secondItem="A97-6i-MXo" secondAttribute="height" multiplier="1:1" id="QKF-ph-sEF"/>
+                                            <constraint firstAttribute="centerY" secondItem="mc1-99-Ozm" secondAttribute="centerY" id="RVF-Ze-yWL"/>
+                                            <constraint firstAttribute="centerY" secondItem="mc1-99-Ozm" secondAttribute="centerY" id="SCX-12-hGA"/>
+                                            <constraint firstAttribute="centerX" secondItem="mc1-99-Ozm" secondAttribute="centerX" id="VoR-8c-5em"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Hvr-bg-Mr9"/>
+                                                <exclude reference="RVF-Ze-yWL"/>
+                                                <exclude reference="VoR-8c-5em"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
