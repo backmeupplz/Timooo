@@ -14,10 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Start Google Analytics
-        GAI.sharedInstance().trackerWithTrackingId("UA-43367175-5")
+        self.setupGoogleAnalytics()
         
         return true
+    }
+    
+    func setupGoogleAnalytics() {
+        GAI.sharedInstance().trackerWithTrackingId("UA-43367175-5")
     }
 }
 

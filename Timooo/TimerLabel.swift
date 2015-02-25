@@ -14,5 +14,6 @@ class TimerLabel: UILabel {
         super.awakeFromNib()
         
 //        self.baselineAdjustment = .AlignCenters
+        self.adjustsFontSizeToFitWidth = true
     }
 }
