@@ -14,6 +14,7 @@
 		B335790C1A9C246D002BF317 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B335790B1A9C246D002BF317 /* Images.xcassets */; };
 		B335790F1A9C246D002BF317 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B335790D1A9C246D002BF317 /* LaunchScreen.xib */; };
 		B335791B1A9C246D002BF317 /* TimoooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335791A1A9C246D002BF317 /* TimoooTests.swift */; };
+		B36E5C011AA001750021CF0B /* TomatoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E5C001AA001750021CF0B /* TomatoButton.swift */; };
 		B398F00A1A9D7B1300981196 /* TimerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B398F0091A9D7B1300981196 /* TimerLabel.swift */; };
 		B3B5A71B1A9D56A900F69A5D /* TimerCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */; };
 		B3F130041A9E85D100C07685 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3F130061A9E85D100C07685 /* Localizable.strings */; };
@@ -43,6 +44,7 @@
 		B33579191A9C246D002BF317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B335791A1A9C246D002BF317 /* TimoooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimoooTests.swift; sourceTree = "<group>"; };
 		B33579241A9C2521002BF317 /* Timooo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Timooo-Bridging-Header.h"; sourceTree = "<group>"; };
+		B36E5C001AA001750021CF0B /* TomatoButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomatoButton.swift; sourceTree = "<group>"; };
 		B398F0091A9D7B1300981196 /* TimerLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerLabel.swift; sourceTree = "<group>"; };
 		B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCircle.swift; sourceTree = "<group>"; };
 		B3F130001A9E855300C07685 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */,
 				B398F0091A9D7B1300981196 /* TimerLabel.swift */,
+				B36E5C001AA001750021CF0B /* TomatoButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36E5C011AA001750021CF0B /* TomatoButton.swift in Sources */,
 				B398F00A1A9D7B1300981196 /* TimerLabel.swift in Sources */,
 				B33579071A9C246D002BF317 /* MainViewController.swift in Sources */,
 				B3B5A71B1A9D56A900F69A5D /* TimerCircle.swift in Sources */,

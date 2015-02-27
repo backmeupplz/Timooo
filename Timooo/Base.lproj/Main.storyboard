@@ -134,7 +134,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-p0-3BM" customClass="NKTimeSlider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-p0-3BM">
                                                 <rect key="frame" x="40" y="8" width="243" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="aBw-V7-fmY"/>
@@ -204,30 +204,50 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-eT-kUS" userLabel="Options View">
                                 <rect key="frame" x="256" y="157" width="36" height="285"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-PH-86S">
-                                        <rect key="frame" x="0.0" y="71" width="36" height="30"/>
-                                        <state key="normal" title="25">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-PH-86S" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="71" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="scY-cE-XxC"/>
+                                            <constraint firstAttribute="width" constant="30" id="vs5-Ue-dN6"/>
+                                        </constraints>
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB9-Wo-4eT">
-                                        <rect key="frame" x="0.0" y="109" width="36" height="30"/>
-                                        <state key="normal" title="25">
-                                            <color key="titleColor" red="0.90588241820000004" green="0.090196080509999998" blue="0.11372549830000001" alpha="1" colorSpace="deviceRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGH-JX-Hot">
-                                        <rect key="frame" x="0.0" y="147" width="36" height="30"/>
-                                        <state key="normal" title="25">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB9-Wo-4eT" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="109" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="4LS-aH-8yW"/>
+                                            <constraint firstAttribute="height" constant="30" id="T2l-BU-qpv"/>
+                                        </constraints>
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7z-Zj-OwV">
-                                        <rect key="frame" x="0.0" y="185" width="36" height="30"/>
-                                        <state key="normal" title="25">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGH-JX-Hot" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="147" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7X8-Sw-A3i"/>
+                                            <constraint firstAttribute="width" constant="30" id="bwP-mA-Cp1"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7z-Zj-OwV" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="185" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="6Dg-6Z-JrN"/>
+                                            <constraint firstAttribute="height" constant="30" id="L4G-ot-rmd"/>
+                                        </constraints>
+                                        <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -235,8 +255,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="kB9-Wo-4eT" secondAttribute="centerX" id="0Py-IB-n2D"/>
+                                    <constraint firstAttribute="centerX" secondItem="aGH-JX-Hot" secondAttribute="centerX" id="2Lc-jB-Zqe"/>
+                                    <constraint firstAttribute="centerX" secondItem="f3b-PH-86S" secondAttribute="centerX" id="8Jm-qL-IID"/>
                                     <constraint firstAttribute="width" constant="36" id="AVs-s9-pUf"/>
                                     <constraint firstAttribute="height" constant="285" id="HmV-1J-TwD"/>
+                                    <constraint firstItem="aGH-JX-Hot" firstAttribute="top" secondItem="kB9-Wo-4eT" secondAttribute="bottom" constant="8" id="ObX-cH-Vih"/>
+                                    <constraint firstItem="kB9-Wo-4eT" firstAttribute="top" secondItem="f3b-PH-86S" secondAttribute="bottom" constant="8" id="PBk-dd-cb6"/>
+                                    <constraint firstItem="X7z-Zj-OwV" firstAttribute="top" secondItem="aGH-JX-Hot" secondAttribute="bottom" constant="8" id="Pyb-3c-dh0"/>
+                                    <constraint firstAttribute="centerX" secondItem="X7z-Zj-OwV" secondAttribute="centerX" id="YTP-K5-gv5"/>
+                                    <constraint firstItem="f3b-PH-86S" firstAttribute="top" secondItem="LCl-eT-kUS" secondAttribute="top" constant="71" id="rz2-3D-rco"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -34,11 +34,11 @@ class TimerCircle: UIView {
         CGContextSetLineWidth(context, lineWidth);
         CGContextBeginPath(context);
         
-        var x: CGFloat = self.frame.size.width/2.0
-        var y: CGFloat = self.frame.size.height/2.0
-        var radius: CGFloat = self.frame.size.width/2.0-lineWidth/2.0
-        var startAngle: CGFloat = 0.0
-        var endAngle: CGFloat = CGFloat(2.0*M_PI)
+        let x: CGFloat = self.frame.size.width/2.0
+        let y: CGFloat = self.frame.size.height/2.0
+        let radius: CGFloat = self.frame.size.width/2.0-lineWidth/2.0
+        let startAngle: CGFloat = 0.0
+        let endAngle: CGFloat = CGFloat(2.0*M_PI)
         
         CGContextAddArc(context, x, y, radius, startAngle, endAngle, 0);
         CGContextClosePath(context);
