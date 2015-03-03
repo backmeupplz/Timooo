@@ -56,7 +56,6 @@ class MainViewController: UIViewController {
     
     @IBAction func nextTimer(sender: AnyObject) {
         TomatoLogic.sharedInstance.next()
-        AudioManager.sharedInstance.playTimerBeep()
     }
 }
 
