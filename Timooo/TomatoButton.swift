@@ -17,7 +17,7 @@ enum TomatoState {
 class TomatoButton: UIButton {
     var tomatoState: TomatoState? {
         didSet {
-            checkColor()
+            checkState()
             setNeedsLayout()
         }
     }
@@ -36,9 +36,6 @@ class TomatoButton: UIButton {
         super.awakeFromNib()
         
         maskView = getTomatoImageView()
-        tomatoState = .Running
-        percent = 50.0
-        reverse = false
     }
     
     override func drawRect(rect: CGRect) {
@@ -55,14 +52,15 @@ class TomatoButton: UIButton {
         return tomatoImageView
     }
     
-    func checkColor() {
+    func checkState() {
         switch tomatoState! {
         case .Running:
-            backgroundColor = UIColor(white: 0.0, alpha: 0.2)
+            backgroundColor = UIColor(white: 1.0, alpha: 0.7)
+            self.setupRunning()
         case .Finished:
             backgroundColor = UIColor.blackColor()
         default:
-            backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+            backgroundColor = UIColor(white: 1.0, alpha: 0.7)
         }
     }
     
@@ -92,5 +90,10 @@ class TomatoButton: UIButton {
         UIColor.redColor().set()
         
         arc.fill()
+    }
+    
+    func setupRunning() {
+        percent = 0.0
+        reverse = false
     }
 }

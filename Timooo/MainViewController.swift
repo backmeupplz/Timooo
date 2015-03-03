@@ -9,10 +9,26 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    @IBOutlet weak var tomatoView: TomatoView!
+    @IBOutlet var tomatoButtons: [TomatoButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tomatoView.tomatoButtons = tomatoButtons
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    @IBAction func toggleSound(sender: UIButton) {
+        sender.selected = !sender.selected
+    }
+    
+    @IBAction func selectTomato(sender: UIButton) {
+        tomatoView.currentTomato = sender.tag
+    }
+    
 }
 

@@ -18,6 +18,7 @@
 		B398F00A1A9D7B1300981196 /* TimerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B398F0091A9D7B1300981196 /* TimerLabel.swift */; };
 		B3B5A71B1A9D56A900F69A5D /* TimerCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */; };
 		B3F130041A9E85D100C07685 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3F130061A9E85D100C07685 /* Localizable.strings */; };
+		B3FCDDB31AA52F8B001CEA3E /* TomatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B3F130011A9E855300C07685 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B3F130051A9E85D100C07685 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B3F130071A9E85D600C07685 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomatoView.swift; sourceTree = "<group>"; };
 		D3F28620950E097CC430C274 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */,
 				B398F0091A9D7B1300981196 /* TimerLabel.swift */,
 				B36E5C001AA001750021CF0B /* TomatoButton.swift */,
+				B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				TargetAttributes = {
 					B33578FE1A9C246D002BF317 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 9VUB6L23QH;
 					};
 					B33579131A9C246D002BF317 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -325,6 +329,7 @@
 				B398F00A1A9D7B1300981196 /* TimerLabel.swift in Sources */,
 				B33579071A9C246D002BF317 /* MainViewController.swift in Sources */,
 				B3B5A71B1A9D56A900F69A5D /* TimerCircle.swift in Sources */,
+				B3FCDDB31AA52F8B001CEA3E /* TomatoView.swift in Sources */,
 				B33579051A9C246D002BF317 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,9 +468,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Timooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Timooo/Timooo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -477,9 +485,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Timooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Timooo/Timooo-Bridging-Header.h";
 			};
 			name = Release;

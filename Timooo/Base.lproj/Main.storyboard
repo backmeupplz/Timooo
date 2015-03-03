@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -80,14 +80,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udl-0x-F6L" userLabel="Container">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udl-0x-F6L" userLabel="Container">
                                 <rect key="frame" x="0.0" y="398" width="300" height="202"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-Zw-F75" userLabel="Buttons View">
-                                        <rect key="frame" x="-10" y="53" width="320" height="95"/>
+                                        <rect key="frame" x="0.0" y="8" width="300" height="194"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4m-cb-TQf" userLabel="Stop Button">
-                                                <rect key="frame" x="63" y="40" width="55" height="55"/>
+                                                <rect key="frame" x="63" y="88" width="55" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="Ep4-0e-nCT"/>
                                                     <constraint firstAttribute="width" constant="55" id="cZw-3r-L2l"/>
@@ -99,7 +99,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-i4-AY0" userLabel="Play Button">
-                                                <rect key="frame" x="136" y="40" width="50" height="55"/>
+                                                <rect key="frame" x="136" y="88" width="50" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="KpR-xi-hS2"/>
                                                     <constraint firstAttribute="height" constant="55" id="dud-lm-F7O"/>
@@ -111,7 +111,7 @@
                                                 </state>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxr-G7-8fQ" userLabel="Pause Button">
-                                                <rect key="frame" x="136" y="40" width="47" height="55"/>
+                                                <rect key="frame" x="136" y="88" width="47" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="91W-Xg-Q9J"/>
                                                     <constraint firstAttribute="width" constant="47" id="xzq-iT-D5o"/>
@@ -123,7 +123,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIm-Wv-5fZ" userLabel="Next Button">
-                                                <rect key="frame" x="200" y="40" width="57" height="55"/>
+                                                <rect key="frame" x="200" y="88" width="57" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="57" id="Q0O-Cb-bbi"/>
                                                     <constraint firstAttribute="height" constant="55" id="aGl-vM-3ao"/>
@@ -135,7 +135,7 @@
                                                 </state>
                                             </button>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-p0-3BM">
-                                                <rect key="frame" x="40" y="8" width="243" height="31"/>
+                                                <rect key="frame" x="39" y="50" width="243" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="aBw-V7-fmY"/>
                                                     <constraint firstAttribute="width" constant="239" id="puK-mW-1Pc"/>
@@ -147,26 +147,43 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="HIm-Wv-5fZ" firstAttribute="leading" secondItem="JjJ-i4-AY0" secondAttribute="trailing" constant="14" id="6sA-VG-IWK"/>
-                                            <constraint firstAttribute="bottom" secondItem="rxr-G7-8fQ" secondAttribute="bottom" id="8E8-9Y-UJS"/>
+                                            <constraint firstAttribute="bottom" secondItem="rxr-G7-8fQ" secondAttribute="bottom" constant="51" id="8E8-9Y-UJS"/>
                                             <constraint firstItem="rxr-G7-8fQ" firstAttribute="leading" secondItem="w4m-cb-TQf" secondAttribute="trailing" constant="18" id="DHS-fE-Oeh"/>
                                             <constraint firstItem="JjJ-i4-AY0" firstAttribute="leading" secondItem="w4m-cb-TQf" secondAttribute="trailing" constant="18" id="JiU-Vm-XrR"/>
                                             <constraint firstItem="w4m-cb-TQf" firstAttribute="leading" secondItem="mrX-Zw-F75" secondAttribute="leading" constant="63" id="OJ5-4o-gkr"/>
-                                            <constraint firstAttribute="width" constant="320" id="Og4-xs-Puk"/>
-                                            <constraint firstAttribute="bottom" secondItem="w4m-cb-TQf" secondAttribute="bottom" id="SpY-Eo-58L"/>
-                                            <constraint firstItem="2ao-p0-3BM" firstAttribute="leading" secondItem="mrX-Zw-F75" secondAttribute="leading" constant="42" id="amh-5Y-ZvI"/>
-                                            <constraint firstAttribute="bottom" secondItem="JjJ-i4-AY0" secondAttribute="bottom" id="ehA-75-aLq"/>
-                                            <constraint firstAttribute="bottom" secondItem="HIm-Wv-5fZ" secondAttribute="bottom" id="gOy-yX-s2p"/>
-                                            <constraint firstItem="2ao-p0-3BM" firstAttribute="top" secondItem="mrX-Zw-F75" secondAttribute="top" constant="8" id="qCR-PZ-Dda"/>
+                                            <constraint firstAttribute="width" constant="300" id="Og4-xs-Puk"/>
+                                            <constraint firstAttribute="bottom" secondItem="w4m-cb-TQf" secondAttribute="bottom" constant="51" id="SpY-Eo-58L"/>
+                                            <constraint firstItem="2ao-p0-3BM" firstAttribute="leading" secondItem="mrX-Zw-F75" secondAttribute="leading" constant="41" id="amh-5Y-ZvI"/>
+                                            <constraint firstAttribute="height" constant="194" id="eCP-3n-8gB"/>
+                                            <constraint firstAttribute="bottom" secondItem="JjJ-i4-AY0" secondAttribute="bottom" constant="51" id="ehA-75-aLq"/>
+                                            <constraint firstAttribute="bottom" secondItem="HIm-Wv-5fZ" secondAttribute="bottom" constant="51" id="gOy-yX-s2p"/>
+                                            <constraint firstItem="2ao-p0-3BM" firstAttribute="top" secondItem="mrX-Zw-F75" secondAttribute="top" constant="50" id="qCR-PZ-Dda"/>
                                             <constraint firstAttribute="height" constant="95" id="qlv-hb-Tyd"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="qlv-hb-Tyd"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="mrX-Zw-F75" secondAttribute="centerX" id="Cfq-sK-ZWx"/>
+                                    <constraint firstAttribute="bottom" secondItem="mrX-Zw-F75" secondAttribute="bottom" id="czv-MC-s4r"/>
                                     <constraint firstAttribute="width" secondItem="udl-0x-F6L" secondAttribute="height" multiplier="150:101" id="da8-zt-L9X"/>
-                                    <constraint firstAttribute="centerY" secondItem="mrX-Zw-F75" secondAttribute="centerY" id="v3l-5h-0S1"/>
+                                    <constraint firstItem="mrX-Zw-F75" firstAttribute="top" secondItem="udl-0x-F6L" secondAttribute="top" constant="8" id="trw-Cf-2zA"/>
+                                    <constraint firstAttribute="centerY" secondItem="mrX-Zw-F75" secondAttribute="centerY" constant="-4" id="v3l-5h-0S1"/>
+                                    <constraint firstAttribute="centerY" secondItem="mrX-Zw-F75" secondAttribute="centerY" constant="-4" id="yzR-0u-Pbj"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="da8-zt-L9X"/>
+                                        <exclude reference="czv-MC-s4r"/>
+                                        <exclude reference="trw-Cf-2zA"/>
+                                        <exclude reference="v3l-5h-0S1"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qv-4L-uAW">
                                 <rect key="frame" x="0.0" y="20" width="38" height="34"/>
@@ -200,8 +217,11 @@
                                         <exclude reference="NzD-We-N2f"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="toggleSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1C-qS-rWm"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-eT-kUS" userLabel="Options View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-eT-kUS" userLabel="Options View" customClass="TomatoView" customModule="Timooo" customModuleProvider="target">
                                 <rect key="frame" x="256" y="157" width="36" height="285"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-PH-86S" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
@@ -215,8 +235,11 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectTomato:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpM-83-3RM"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB9-Wo-4eT" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kB9-Wo-4eT" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
                                         <rect key="frame" x="3" y="109" width="30" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -227,8 +250,11 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectTomato:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXc-sm-I1d"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGH-JX-Hot" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGH-JX-Hot" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
                                         <rect key="frame" x="3" y="147" width="30" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -239,8 +265,11 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectTomato:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L6K-g1-mYr"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7z-Zj-OwV" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7z-Zj-OwV" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
                                         <rect key="frame" x="3" y="185" width="30" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -251,6 +280,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectTomato:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7MT-jK-xJ2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -281,6 +313,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tKd-H6-e5B" secondAttribute="bottom" constant="105" id="Fby-1p-q8E"/>
                             <constraint firstItem="pjh-pX-zmz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="67:150" id="HKe-Br-KkP"/>
                             <constraint firstItem="7Qv-4L-uAW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="J8z-mL-PNA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="udl-0x-F6L" secondAttribute="trailing" constant="-16" id="KNv-7S-YHL"/>
                             <constraint firstAttribute="centerX" secondItem="pjh-pX-zmz" secondAttribute="centerX" id="Koz-gv-Br0"/>
                             <constraint firstAttribute="centerX" secondItem="tKd-H6-e5B" secondAttribute="centerX" id="Lgy-QB-psz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LCl-eT-kUS" secondAttribute="trailing" constant="-8" id="MIS-Xc-4sB"/>
@@ -294,6 +327,7 @@
                             <constraint firstItem="LCl-eT-kUS" firstAttribute="leading" secondItem="tKd-H6-e5B" secondAttribute="trailing" constant="8" id="aZj-Sp-6Y6"/>
                             <constraint firstItem="tKd-H6-e5B" firstAttribute="top" secondItem="pjh-pX-zmz" secondAttribute="bottom" id="bh5-3b-1e0"/>
                             <constraint firstItem="3CN-hG-xzL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gfu-uU-eOL"/>
+                            <constraint firstItem="udl-0x-F6L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="joI-n8-sGo"/>
                             <constraint firstItem="LCl-eT-kUS" firstAttribute="leading" secondItem="mrX-Zw-F75" secondAttribute="trailing" constant="-54" id="nJ5-lF-lnA"/>
                             <constraint firstAttribute="height" secondItem="udl-0x-F6L" secondAttribute="height" multiplier="600:202" id="oQx-wH-vWK"/>
                             <constraint firstItem="pjh-pX-zmz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qAr-Ga-aio"/>
@@ -323,6 +357,13 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="600"/>
+                    <connections>
+                        <outlet property="tomatoView" destination="LCl-eT-kUS" id="dD4-wn-nLa"/>
+                        <outletCollection property="tomatoButtons" destination="f3b-PH-86S" collectionClass="NSMutableArray" id="qZn-ff-Mho"/>
+                        <outletCollection property="tomatoButtons" destination="kB9-Wo-4eT" collectionClass="NSMutableArray" id="X8r-be-0xf"/>
+                        <outletCollection property="tomatoButtons" destination="aGH-JX-Hot" collectionClass="NSMutableArray" id="GdC-jX-Fyb"/>
+                        <outletCollection property="tomatoButtons" destination="X7z-Zj-OwV" collectionClass="NSMutableArray" id="4vv-aZ-mMo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
