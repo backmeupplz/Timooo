@@ -97,6 +97,9 @@
                                                 <state key="normal" image="icon_stop">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7WH-iQ-Ikn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-i4-AY0" userLabel="Play Button">
                                                 <rect key="frame" x="136" y="88" width="50" height="55"/>
@@ -109,6 +112,9 @@
                                                 <state key="normal" image="icon_play">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5og-ft-gRS"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxr-G7-8fQ" userLabel="Pause Button">
                                                 <rect key="frame" x="136" y="88" width="47" height="55"/>
@@ -121,6 +127,9 @@
                                                 <state key="normal" image="icon_pause">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pauseTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ktz-4b-bxc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIm-Wv-5fZ" userLabel="Next Button">
                                                 <rect key="frame" x="200" y="88" width="57" height="55"/>
@@ -133,8 +142,11 @@
                                                 <state key="normal" image="icon_next">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LpK-QF-9XF"/>
+                                                </connections>
                                             </button>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-p0-3BM">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-p0-3BM" customClass="TimerSlider" customModule="Timooo" customModuleProvider="target">
                                                 <rect key="frame" x="39" y="50" width="243" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="aBw-V7-fmY"/>
@@ -142,6 +154,9 @@
                                                 </constraints>
                                                 <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="maximumTrackTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <connections>
+                                                    <action selector="changePercent:" destination="BYZ-38-t0r" eventType="valueChanged" id="gry-DH-nzj"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -358,6 +373,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="600"/>
                     <connections>
+                        <outlet property="pauseButton" destination="rxr-G7-8fQ" id="yqK-mH-fr2"/>
+                        <outlet property="playButton" destination="JjJ-i4-AY0" id="Z4N-Vd-g4g"/>
+                        <outlet property="slider" destination="2ao-p0-3BM" id="JVu-iY-ztU"/>
                         <outlet property="tomatoView" destination="LCl-eT-kUS" id="dD4-wn-nLa"/>
                         <outletCollection property="tomatoButtons" destination="f3b-PH-86S" collectionClass="NSMutableArray" id="qZn-ff-Mho"/>
                         <outletCollection property="tomatoButtons" destination="kB9-Wo-4eT" collectionClass="NSMutableArray" id="X8r-be-0xf"/>

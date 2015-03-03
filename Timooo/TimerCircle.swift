@@ -11,8 +11,16 @@ import Foundation
 let lineWidth: CGFloat = 10.0
 
 class TimerCircle: UIView {
-    var percent: Float = 55.0
-    var reverse: Bool = false
+    var percent: Float = 0.0 {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
+    var reverse: Bool = false {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
     var color: UIColor?
     
     override func awakeFromNib() {
@@ -20,6 +28,8 @@ class TimerCircle: UIView {
         
         self.color = self.backgroundColor
         self.backgroundColor = UIColor.clearColor()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedPercentNotification:", name: didChangePercentNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedReverseNotification:", name: didChangeReverseNotification, object: nil)
     }
     
     override func drawRect(rect: CGRect) {
@@ -64,5 +74,13 @@ class TimerCircle: UIView {
         
         CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor);
         CGContextDrawPath(context, kCGPathStroke);
+    }
+    
+    func receivedPercentNotification(notification: NSNotification) {
+        self.percent = notification.userInfo![newValueKey] as Float
+    }
+    
+    func receivedReverseNotification(notification: NSNotification) {
+        self.reverse = notification.userInfo![newValueKey] as Bool
     }
 }

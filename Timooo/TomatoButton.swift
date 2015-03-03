@@ -18,17 +18,17 @@ class TomatoButton: UIButton {
     var tomatoState: TomatoState? {
         didSet {
             checkState()
-            setNeedsLayout()
+            setNeedsDisplay()
         }
     }
     var percent: Float? {
         didSet {
-            setNeedsLayout()
+            setNeedsDisplay()
         }
     }
     var reverse: Bool? {
         didSet {
-            setNeedsLayout()
+            setNeedsDisplay()
         }
     }
     

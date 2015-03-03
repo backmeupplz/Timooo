@@ -11,6 +11,9 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var tomatoView: TomatoView!
     @IBOutlet var tomatoButtons: [TomatoButton]!
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +30,31 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func selectTomato(sender: UIButton) {
-        tomatoView.currentTomato = sender.tag
+        TomatoLogic.sharedInstance.currentTomato = sender.tag
     }
     
+    @IBAction func changePercent(sender: UISlider) {
+        TomatoLogic.sharedInstance.percent = sender.value
+    }
+
+    @IBAction func stopTimer(sender: AnyObject) {
+        TomatoLogic.sharedInstance.stop()
+    }
+
+    @IBAction func playTimer(sender: AnyObject) {
+        pauseButton.hidden = false
+        playButton.hidden = true
+        TomatoLogic.sharedInstance.play()
+    }
+    
+    @IBAction func pauseTimer(sender: AnyObject) {
+        pauseButton.hidden = true
+        playButton.hidden = false
+        TomatoLogic.sharedInstance.pause()
+    }
+    
+    @IBAction func nextTimer(sender: AnyObject) {
+        TomatoLogic.sharedInstance.next()
+    }
 }
 

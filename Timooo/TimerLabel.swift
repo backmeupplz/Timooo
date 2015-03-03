@@ -15,5 +15,11 @@ class TimerLabel: UILabel {
         
 //        self.baselineAdjustment = .AlignCenters
         self.adjustsFontSizeToFitWidth = true
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedTimeNotification:", name: didChangeTimeNotification, object: nil)
+    }
+    
+    func receivedTimeNotification(notification: NSNotification) {
+        self.text = notification.userInfo![newValueKey] as? String
     }
 }
