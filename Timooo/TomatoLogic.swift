@@ -8,7 +8,7 @@
 
 import Foundation
 
-let _sharedInstance = TomatoLogic()
+let _sharedInstanceTomatoLogic = TomatoLogic()
 
 let didChangePercentNotification = "didChangePercentNotification"
 let didChangeCurrentTomatoNotification = "didChangeCurrentTomatoNotification"
@@ -18,7 +18,7 @@ let newValueKey = "newValueKey"
 
 class TomatoLogic {
     class var sharedInstance: TomatoLogic {
-        return _sharedInstance
+        return _sharedInstanceTomatoLogic
     }
     var percent: Float = 0.0 {
         didSet {

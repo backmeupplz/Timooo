@@ -19,6 +19,9 @@
 		B3B5A71B1A9D56A900F69A5D /* TimerCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */; };
 		B3C726E41AA53ADE0034EACD /* TomatoLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C726E31AA53ADE0034EACD /* TomatoLogic.swift */; };
 		B3C726E81AA5527B0034EACD /* TimerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C726E71AA5527B0034EACD /* TimerSlider.swift */; };
+		B3C726EA1AA556BB0034EACD /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C726E91AA556BB0034EACD /* AudioManager.swift */; };
+		B3C726EC1AA557EB0034EACD /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3C726EB1AA557EB0034EACD /* sound.wav */; };
+		B3C726EE1AA5588B0034EACD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C726ED1AA5588B0034EACD /* AVFoundation.framework */; };
 		B3F130041A9E85D100C07685 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3F130061A9E85D100C07685 /* Localizable.strings */; };
 		B3FCDDB31AA52F8B001CEA3E /* TomatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,9 @@
 		B3B5A71A1A9D56A900F69A5D /* TimerCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCircle.swift; sourceTree = "<group>"; };
 		B3C726E31AA53ADE0034EACD /* TomatoLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomatoLogic.swift; sourceTree = "<group>"; };
 		B3C726E71AA5527B0034EACD /* TimerSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerSlider.swift; sourceTree = "<group>"; };
+		B3C726E91AA556BB0034EACD /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		B3C726EB1AA557EB0034EACD /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
+		B3C726ED1AA5588B0034EACD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B3F130001A9E855300C07685 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		B3F130011A9E855300C07685 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B3F130051A9E85D100C07685 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C726EE1AA5588B0034EACD /* AVFoundation.framework in Frameworks */,
 				5D142A9D92D8B9F1DC369F31 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +89,7 @@
 		0009E667C30A245F833288D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3C726ED1AA5588B0034EACD /* AVFoundation.framework */,
 				D3F28620950E097CC430C274 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -123,6 +131,7 @@
 		B33579021A9C246D002BF317 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B3C726EB1AA557EB0034EACD /* sound.wav */,
 				B33579031A9C246D002BF317 /* Info.plist */,
 				B33579241A9C2521002BF317 /* Timooo-Bridging-Header.h */,
 				B3F130061A9E85D100C07685 /* Localizable.strings */,
@@ -164,6 +173,7 @@
 			children = (
 				B33579041A9C246D002BF317 /* AppDelegate.swift */,
 				B3C726E31AA53ADE0034EACD /* TomatoLogic.swift */,
+				B3C726E91AA556BB0034EACD /* AudioManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -277,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C726EC1AA557EB0034EACD /* sound.wav in Resources */,
 				B335790A1A9C246D002BF317 /* Main.storyboard in Resources */,
 				B3F130041A9E85D100C07685 /* Localizable.strings in Resources */,
 				B335790F1A9C246D002BF317 /* LaunchScreen.xib in Resources */,
@@ -337,6 +348,7 @@
 				B33579071A9C246D002BF317 /* MainViewController.swift in Sources */,
 				B3B5A71B1A9D56A900F69A5D /* TimerCircle.swift in Sources */,
 				B3FCDDB31AA52F8B001CEA3E /* TomatoView.swift in Sources */,
+				B3C726EA1AA556BB0034EACD /* AudioManager.swift in Sources */,
 				B33579051A9C246D002BF317 /* AppDelegate.swift in Sources */,
 				B3C726E41AA53ADE0034EACD /* TomatoLogic.swift in Sources */,
 			);

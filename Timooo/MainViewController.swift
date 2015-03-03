@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func toggleSound(sender: UIButton) {
+        AudioManager.sharedInstance.enabled = sender.selected
         sender.selected = !sender.selected
     }
     
@@ -55,6 +56,7 @@ class MainViewController: UIViewController {
     
     @IBAction func nextTimer(sender: AnyObject) {
         TomatoLogic.sharedInstance.next()
+        AudioManager.sharedInstance.playTimerBeep()
     }
 }
 
