@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gXw-E8-Qaj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -7,6 +7,127 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="RFp-bC-NNi">
+            <objects>
+                <viewController id="gXw-E8-Qaj" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lzO-Qc-3jT"/>
+                        <viewControllerLayoutGuide type="bottom" id="3NX-gi-MEZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ikd-5X-OV1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="78P-db-8gc"/>
+                        <segue destination="B95-ip-p6v" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="AXh-F9-bnh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwV-tk-EN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171" y="317"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="hec-jX-d4t">
+            <objects>
+                <tableViewController id="B95-ip-p6v" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="Haz-0P-h1v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.97647058823529409" green="0.86274509803921573" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TomatoCell" id="peD-gd-Roc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="peD-gd-Roc" id="xZu-Ab-TJG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tomato" translatesAutoresizingMaskIntoConstraints="NO" id="UX7-m2-sul">
+                                            <rect key="frame" x="137" y="34" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="LJ2-os-YLa"/>
+                                                <constraint firstAttribute="height" constant="35" id="xLa-2H-5vU"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tomato" translatesAutoresizingMaskIntoConstraints="NO" id="3Hs-XD-KDF">
+                                            <rect key="frame" x="94" y="34" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="HKF-lt-1ho"/>
+                                                <constraint firstAttribute="width" constant="35" id="T6M-3g-Vie"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tomato" translatesAutoresizingMaskIntoConstraints="NO" id="xE9-EL-7gq">
+                                            <rect key="frame" x="8" y="34" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="szq-XU-EoM"/>
+                                                <constraint firstAttribute="height" constant="35" id="u2z-yT-qYx"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK5-xL-xRB">
+                                            <rect key="frame" x="8" y="10" width="288" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="288" id="Mz3-Dz-Apw"/>
+                                                <constraint firstAttribute="height" constant="21" id="dpW-lp-Olu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ir9-ln-5xs">
+                                            <rect key="frame" x="51" y="41" width="127" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="F9Y-S5-loY"/>
+                                                <constraint firstAttribute="width" constant="127" id="RAq-yg-Kri"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tomato" translatesAutoresizingMaskIntoConstraints="NO" id="xt2-h1-Hgh">
+                                            <rect key="frame" x="51" y="34" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="MUd-O0-APx"/>
+                                                <constraint firstAttribute="height" constant="35" id="htk-z5-SFB"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tomato" translatesAutoresizingMaskIntoConstraints="NO" id="Cqu-oM-hqm">
+                                            <rect key="frame" x="180" y="34" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="ZBX-pi-Zav"/>
+                                                <constraint firstAttribute="height" constant="35" id="lAo-W4-2lF"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xE9-EL-7gq" firstAttribute="top" secondItem="gK5-xL-xRB" secondAttribute="bottom" constant="3" id="4Z2-xV-uET"/>
+                                        <constraint firstItem="xE9-EL-7gq" firstAttribute="leading" secondItem="xZu-Ab-TJG" secondAttribute="leadingMargin" id="4Zb-xD-LTn"/>
+                                        <constraint firstItem="3Hs-XD-KDF" firstAttribute="leading" secondItem="xt2-h1-Hgh" secondAttribute="trailing" constant="8" id="Aae-UF-7Np"/>
+                                        <constraint firstItem="UX7-m2-sul" firstAttribute="leading" secondItem="3Hs-XD-KDF" secondAttribute="trailing" constant="8" id="PUh-aK-HP2"/>
+                                        <constraint firstItem="3Hs-XD-KDF" firstAttribute="top" secondItem="gK5-xL-xRB" secondAttribute="bottom" constant="3" id="QgX-fN-zuh"/>
+                                        <constraint firstItem="xt2-h1-Hgh" firstAttribute="leading" secondItem="xE9-EL-7gq" secondAttribute="trailing" constant="8" id="U6u-W0-gQN"/>
+                                        <constraint firstItem="Ir9-ln-5xs" firstAttribute="leading" secondItem="xE9-EL-7gq" secondAttribute="trailing" constant="8" id="WOc-31-NrT"/>
+                                        <constraint firstItem="UX7-m2-sul" firstAttribute="top" secondItem="gK5-xL-xRB" secondAttribute="bottom" constant="3" id="aNL-bu-JeF"/>
+                                        <constraint firstItem="gK5-xL-xRB" firstAttribute="top" secondItem="xZu-Ab-TJG" secondAttribute="topMargin" constant="2" id="cwK-QR-Sz0"/>
+                                        <constraint firstItem="Cqu-oM-hqm" firstAttribute="top" secondItem="gK5-xL-xRB" secondAttribute="bottom" constant="3" id="fSO-rz-NXj"/>
+                                        <constraint firstItem="xt2-h1-Hgh" firstAttribute="top" secondItem="gK5-xL-xRB" secondAttribute="bottom" constant="3" id="hcx-3f-2VV"/>
+                                        <constraint firstItem="gK5-xL-xRB" firstAttribute="leading" secondItem="xZu-Ab-TJG" secondAttribute="leadingMargin" id="lqP-ip-qJ3"/>
+                                        <constraint firstItem="Cqu-oM-hqm" firstAttribute="leading" secondItem="Ir9-ln-5xs" secondAttribute="trailing" constant="2" id="oxy-XM-Ogf"/>
+                                        <constraint firstItem="Ir9-ln-5xs" firstAttribute="top" secondItem="gK5-xL-xRB" secondAttribute="bottom" constant="10" id="xRY-HW-vW1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.86274509799999999" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B95-ip-p6v" id="xQr-BO-kXK"/>
+                            <outlet property="delegate" destination="B95-ip-p6v" id="0FE-BW-oNC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOb-J4-DNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="-425"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -16,11 +137,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKd-H6-e5B" userLabel="Container">
-                                <rect key="frame" x="52" y="105" width="196" height="390"/>
+                                <rect key="frame" x="202" y="105" width="196" height="390"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A97-6i-MXo" customClass="TimerCircle" customModule="Timooo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="97" width="196" height="196"/>
@@ -72,7 +193,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timooo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="pjh-pX-zmz">
-                                <rect key="frame" x="16" y="20" width="268" height="182"/>
+                                <rect key="frame" x="166" y="20" width="268" height="182"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pjh-pX-zmz" secondAttribute="height" multiplier="268:85" constant="-305.83529411764709" id="pEk-ph-9Nk"/>
                                 </constraints>
@@ -81,10 +202,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udl-0x-F6L" userLabel="Container">
-                                <rect key="frame" x="0.0" y="398" width="300" height="202"/>
+                                <rect key="frame" x="0.0" y="398" width="600" height="202"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-Zw-F75" userLabel="Buttons View">
-                                        <rect key="frame" x="0.0" y="8" width="300" height="194"/>
+                                        <rect key="frame" x="150" y="8" width="300" height="194"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4m-cb-TQf" userLabel="Stop Button">
                                                 <rect key="frame" x="63" y="88" width="55" height="55"/>
@@ -211,9 +332,12 @@
                                 <state key="normal" image="icon_side">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleSideMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mOa-cI-yAJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CN-hG-xzL">
-                                <rect key="frame" x="263" y="20" width="37" height="37"/>
+                                <rect key="frame" x="563" y="20" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="1ga-Mo-ETf"/>
                                     <constraint firstAttribute="width" constant="37" id="C1i-ot-2VW"/>
@@ -237,7 +361,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-eT-kUS" userLabel="Options View" customClass="TomatoView" customModule="Timooo" customModuleProvider="target">
-                                <rect key="frame" x="256" y="157" width="36" height="285"/>
+                                <rect key="frame" x="556" y="157" width="36" height="285"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-PH-86S" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">
                                         <rect key="frame" x="3" y="71" width="30" height="30"/>
@@ -370,8 +494,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="300" height="600"/>
                     <connections>
                         <outlet property="pauseButton" destination="rxr-G7-8fQ" id="yqK-mH-fr2"/>
                         <outlet property="playButton" destination="JjJ-i4-AY0" id="Z4N-Vd-g4g"/>
@@ -385,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="317"/>
+            <point key="canvasLocation" x="597" y="317"/>
         </scene>
     </scenes>
     <resources>
@@ -396,5 +518,6 @@
         <image name="icon_sound" width="85" height="85"/>
         <image name="icon_sound_off" width="85" height="85"/>
         <image name="icon_stop" width="85" height="85"/>
+        <image name="icon_tomato" width="30" height="30"/>
     </resources>
 </document>
