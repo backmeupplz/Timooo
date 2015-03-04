@@ -16,7 +16,7 @@ let didChangeReverseNotification = "didChangeReverseNotification"
 let didChangeTimeNotification = "didChangeTimeNotification"
 let newValueKey = "newValueKey"
 
-class TomatoLogic {
+class TomatoLogic: NSObject {
     class var sharedInstance: TomatoLogic {
         return _sharedInstanceTomatoLogic
     }
@@ -44,6 +44,7 @@ class TomatoLogic {
             NSNotificationCenter.defaultCenter().postNotificationName(didChangeTimeNotification, object: nil, userInfo:[newValueKey:timeString])
         }
     }
+    var timer = NSTimer()
     
     func stop() {
         println("STOP")
@@ -51,13 +52,26 @@ class TomatoLogic {
     
     func pause() {
         println("PAUSE")
+        timer.invalidate()
     }
     
     func play() {
         println("PLAY")
+        if (!timer.valid) {
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1,
+                target: TomatoLogic.sharedInstance,
+                selector: Selector("tick"),
+                userInfo: nil,
+                repeats: true)
+        }
     }
     
     func next() {
         println("NEXT")
+    }
+    
+    func tick() {
+        println("tick")
     }
 }

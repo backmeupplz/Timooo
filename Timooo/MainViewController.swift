@@ -20,10 +20,7 @@ class MainViewController: UIViewController {
         
         tomatoView.tomatoButtons = tomatoButtons
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
     }
     
     @IBAction func toggleSideMenu(sender: AnyObject) {

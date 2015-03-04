@@ -9,5 +9,22 @@
 import Foundation
 
 class HistoryObject {
+    var tomatosCount = 0
+    var date: NSDate = NSDate()
+    var dateSring: String {
+        get {
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = .MediumStyle
+            formatter.timeStyle = .NoStyle
+            return formatter.stringFromDate(date)
+        }
+    }
     
+    func setDate(year: Int, month: Int, day: Int) {
+        var dateComps = NSDateComponents()
+        dateComps.year = year
+        dateComps.month = month
+        dateComps.day = day
+        date = NSCalendar.currentCalendar().dateFromComponents(dateComps)!
+    }
 }

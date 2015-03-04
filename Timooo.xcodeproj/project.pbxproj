@@ -10,6 +10,7 @@
 		5D142A9D92D8B9F1DC369F31 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F28620950E097CC430C274 /* libPods.a */; };
 		B320B9351AA6837E00CC04B2 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320B9341AA6837D00CC04B2 /* SideViewController.swift */; };
 		B320B9371AA6851300CC04B2 /* HistoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320B9361AA6851300CC04B2 /* HistoryObject.swift */; };
+		B320B9391AA68CDB00CC04B2 /* TomatoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320B9381AA68CDB00CC04B2 /* TomatoCell.swift */; };
 		B33579051A9C246D002BF317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33579041A9C246D002BF317 /* AppDelegate.swift */; };
 		B33579071A9C246D002BF317 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33579061A9C246D002BF317 /* MainViewController.swift */; };
 		B335790A1A9C246D002BF317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33579081A9C246D002BF317 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		AD9B7C2F2193E313BA43D9D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B320B9341AA6837D00CC04B2 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		B320B9361AA6851300CC04B2 /* HistoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryObject.swift; sourceTree = "<group>"; };
+		B320B9381AA68CDB00CC04B2 /* TomatoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomatoCell.swift; sourceTree = "<group>"; };
 		B33578FF1A9C246D002BF317 /* Timooo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timooo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33579031A9C246D002BF317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B33579041A9C246D002BF317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				B36E5C001AA001750021CF0B /* TomatoButton.swift */,
 				B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */,
 				B3C726E71AA5527B0034EACD /* TimerSlider.swift */,
+				B320B9381AA68CDB00CC04B2 /* TomatoCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C726E81AA5527B0034EACD /* TimerSlider.swift in Sources */,
+				B320B9391AA68CDB00CC04B2 /* TomatoCell.swift in Sources */,
 				B36E5C011AA001750021CF0B /* TomatoButton.swift in Sources */,
 				B398F00A1A9D7B1300981196 /* TimerLabel.swift in Sources */,
 				B33579071A9C246D002BF317 /* MainViewController.swift in Sources */,
