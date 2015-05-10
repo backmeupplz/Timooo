@@ -8,16 +8,20 @@
 
 import Foundation
 
-class SideViewController: UIViewController {
-    var data = [HistoryObject]()
+class SideViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    
+    var data = [HistoryObject]()
+    
+    // MARK: - VC Life Cycle -
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         generateFakeData()
-        tableView.allowsMultipleSelectionDuringEditing = false
     }
+    
+    // MARK: - General Methods -
     
     func generateFakeData() {
         for number in 1...20 {
@@ -27,9 +31,9 @@ class SideViewController: UIViewController {
             data.append(object)
         }
     }
-}
-
-extension SideViewController: UITableViewDataSource {
+    
+    // MARK: - UITableViewDataSource -
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -39,16 +43,16 @@ extension SideViewController: UITableViewDataSource {
         cell.object = data[indexPath.row]
         return cell
     }
-}
-
-extension SideViewController: UITableViewDelegate {
+    
+    // MARK: - UITableViewDelegate -
+    
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == .Delete) {
-            
+            // TODO: Delete pomodoro
         }
     }
 }

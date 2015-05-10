@@ -21,21 +21,28 @@ class TimerCircle: UIView {
             self.setNeedsDisplay()
         }
     }
-    var color: UIColor?
+    var color: UIColor!
+    
+    // MARK: - View Life Cycle -
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.color = self.backgroundColor
-        self.backgroundColor = UIColor.clearColor()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedPercentNotification:", name: didChangePercentNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedReverseNotification:", name: didChangeReverseNotification, object: nil)
+        self.setupColors()
+        self.setupNotifications()
     }
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
         self.drawCircles()
+    }
+    
+    // MARK: - General Methods -
+    
+    func setupColors() {
+        self.color = self.backgroundColor
+        self.backgroundColor = UIColor.clearColor()
     }
     
     func drawCircles() {
@@ -74,6 +81,13 @@ class TimerCircle: UIView {
         
         CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor);
         CGContextDrawPath(context, kCGPathStroke);
+    }
+    
+    // MARK: - Notifications -
+    
+    func setupNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedPercentNotification:", name: didChangePercentNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedReverseNotification:", name: didChangeReverseNotification, object: nil)
     }
     
     func receivedPercentNotification(notification: NSNotification) {

@@ -10,12 +10,25 @@ import Foundation
 
 class TimerLabel: UILabel {
     
+    // MARK: - View Life Cycle -
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.fixLabelAutoshrink()
+        self.setupNotifications()
+    }
+    
+    // MARK: - General Methods -
+    
+    func fixLabelAutoshrink() {
 //        self.baselineAdjustment = .AlignCenters
         self.adjustsFontSizeToFitWidth = true
-        
+    }
+    
+    // MARK: - Notifications -
+    
+    func setupNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedTimeNotification:", name: didChangeTimeNotification, object: nil)
     }
     

@@ -9,9 +9,18 @@
 import Foundation
 
 class TimerSlider: UISlider {
+    
+    // MARK: - View Life Cycle -
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.setupNotifications()
+    }
+    
+    // MARK: - Notifications -
+    
+    func setupNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedPercentNotification:", name: didChangePercentNotification, object: nil)
     }
     

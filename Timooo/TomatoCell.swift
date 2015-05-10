@@ -9,7 +9,6 @@
 import Foundation
 
 class TomatoCell: UITableViewCell {
-    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet var tomatoImages: [UIImageView]!
     @IBOutlet weak var multiplierLabel: UILabel!
@@ -19,6 +18,8 @@ class TomatoCell: UITableViewCell {
             configure()
         }
     }
+    
+    // MARK: - General Methods -
     
     func configure() {
         self.layoutMargins = UIEdgeInsetsZero

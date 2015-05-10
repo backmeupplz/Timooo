@@ -10,7 +10,7 @@ import Foundation
 
 class HistoryObject {
     var tomatosCount = 0
-    var date: NSDate = NSDate()
+    var date: NSDate!
     var dateSring: String {
         get {
             let formatter = NSDateFormatter()
@@ -19,6 +19,8 @@ class HistoryObject {
             return formatter.stringFromDate(date)
         }
     }
+    
+    // MARK: - General Methods -
     
     func setDate(year: Int, month: Int, day: Int) {
         var dateComps = NSDateComponents()

@@ -9,7 +9,8 @@
 import Foundation
 
 class TomatoView: UIView {
-    var tomatoButtons: [TomatoButton]!
+    @IBOutlet var tomatoButtons: [TomatoButton]!
+    
     var currentTomato: Int = 0 {
         didSet {
             self.changedCurrentTomato()
@@ -26,13 +27,15 @@ class TomatoView: UIView {
         }
     }
     
+    // MARK: - View Life Cycle -
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedPercentNotification:", name: didChangePercentNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedReverseNotification:", name: didChangeReverseNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedCurrentTomatoNotification:", name: didChangeCurrentTomatoNotification, object: nil)
+        self.setupNotifications()
     }
+    
+    // MARK: - General Methods -
     
     func changedCurrentTomato() {
         for index in 0...currentTomato {
@@ -44,6 +47,14 @@ class TomatoView: UIView {
                 tomatoButtons[index].tomatoState = .Fresh
             }
         }
+    }
+    
+    // MARK: - Notifications -
+    
+    func setupNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedPercentNotification:", name: didChangePercentNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedReverseNotification:", name: didChangeReverseNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"receivedCurrentTomatoNotification:", name: didChangeCurrentTomatoNotification, object: nil)
     }
     
     func receivedPercentNotification(notification: NSNotification) {

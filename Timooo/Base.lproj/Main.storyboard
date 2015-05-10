@@ -469,6 +469,12 @@
                                     <constraint firstAttribute="centerX" secondItem="X7z-Zj-OwV" secondAttribute="centerX" id="YTP-K5-gv5"/>
                                     <constraint firstItem="f3b-PH-86S" firstAttribute="top" secondItem="LCl-eT-kUS" secondAttribute="top" constant="71" id="rz2-3D-rco"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="tomatoButtons" destination="f3b-PH-86S" id="AZl-18-jUk"/>
+                                    <outletCollection property="tomatoButtons" destination="kB9-Wo-4eT" id="pTI-Bc-M9m"/>
+                                    <outletCollection property="tomatoButtons" destination="aGH-JX-Hot" id="RCw-I4-ioz"/>
+                                    <outletCollection property="tomatoButtons" destination="X7z-Zj-OwV" id="k11-60-tdL"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92156862745098034" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -531,10 +537,6 @@
                         <outlet property="playButton" destination="JjJ-i4-AY0" id="Z4N-Vd-g4g"/>
                         <outlet property="slider" destination="2ao-p0-3BM" id="JVu-iY-ztU"/>
                         <outlet property="tomatoView" destination="LCl-eT-kUS" id="dD4-wn-nLa"/>
-                        <outletCollection property="tomatoButtons" destination="f3b-PH-86S" collectionClass="NSMutableArray" id="qZn-ff-Mho"/>
-                        <outletCollection property="tomatoButtons" destination="kB9-Wo-4eT" collectionClass="NSMutableArray" id="X8r-be-0xf"/>
-                        <outletCollection property="tomatoButtons" destination="aGH-JX-Hot" collectionClass="NSMutableArray" id="GdC-jX-Fyb"/>
-                        <outletCollection property="tomatoButtons" destination="X7z-Zj-OwV" collectionClass="NSMutableArray" id="4vv-aZ-mMo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

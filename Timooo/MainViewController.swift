@@ -10,18 +10,20 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var tomatoView: TomatoView!
-    @IBOutlet var tomatoButtons: [TomatoButton]!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     
+    // MARK: - VC Life cycle -
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tomatoView.tomatoButtons = tomatoButtons
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
     }
+    
+    // MARK: - IB Actions -
     
     @IBAction func toggleSideMenu(sender: AnyObject) {
         self.revealViewController().revealToggle(sender)

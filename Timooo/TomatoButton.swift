@@ -32,6 +32,8 @@ class TomatoButton: UIButton {
         }
     }
     
+    // MARK: - Object Life Cycle -
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -45,6 +47,8 @@ class TomatoButton: UIButton {
             makeCircle()
         }
     }
+    
+    // MARK: - General Methods -
     
     func getTomatoImageView() -> UIImageView {
         let tomatoImageView = UIImageView(frame: bounds)
