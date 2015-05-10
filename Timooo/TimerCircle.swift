@@ -77,10 +77,10 @@ class TimerCircle: UIView {
     }
     
     func receivedPercentNotification(notification: NSNotification) {
-        self.percent = notification.userInfo![newValueKey] as Float
+        self.percent = notification.userInfo![newValueKey] as! Float
     }
     
     func receivedReverseNotification(notification: NSNotification) {
-        self.reverse = notification.userInfo![newValueKey] as Bool
+        self.reverse = notification.userInfo![newValueKey] as! Bool
     }
 }

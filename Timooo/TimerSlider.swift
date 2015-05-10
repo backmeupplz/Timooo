@@ -16,6 +16,6 @@ class TimerSlider: UISlider {
     }
     
     func receivedPercentNotification(notification: NSNotification) {
-        self.value = notification.userInfo![newValueKey] as Float
+        self.value = notification.userInfo![newValueKey] as! Float
     }
 }
