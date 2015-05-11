@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func changePercent(sender: UISlider) {
-        TomatoLogic.sharedInstance.percent = sender.value
+        TomatoLogic.sharedInstance.setPercentage(sender.value)
     }
 
     @IBAction func stopTimer(sender: AnyObject) {
