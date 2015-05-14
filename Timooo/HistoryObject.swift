@@ -35,6 +35,14 @@ class HistoryObject: NSObject, NSCoding {
     
     // MARK: - General Methods -
     
+    override func isEqual(object: AnyObject?) -> Bool {
+        if (object == nil || !(object is HistoryObject)) {
+            return false
+        } else {
+            return self.date.isEqualToDate(object!.date)
+        }
+    }
+    
     func setDate(year: Int, month: Int, day: Int) {
         var dateComps = NSDateComponents()
         dateComps.year = year
