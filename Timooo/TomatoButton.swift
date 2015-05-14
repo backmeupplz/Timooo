@@ -60,7 +60,7 @@ class TomatoButton: UIButton {
         switch tomatoState! {
         case .Running:
             backgroundColor = UIColor(white:1.0, alpha:0.7)
-            self.setupRunning()
+            setupRunning()
         case .Finished:
             backgroundColor = UIColor(white:0.0, alpha:0.7)
         default:
@@ -71,7 +71,7 @@ class TomatoButton: UIButton {
     func makeCircle() {
         var startPoint: CGFloat?
         var endPoint: CGFloat?
-        if (!self.reverse!) {
+        if (!reverse!) {
             startPoint = CGFloat(-M_PI_2)
             endPoint = CGFloat(2 * M_PI) * CGFloat(percent!/100.0) - CGFloat(M_PI_2)
         } else {

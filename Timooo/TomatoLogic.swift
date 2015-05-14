@@ -24,6 +24,11 @@ class TomatoLogic: NSObject {
         return _sharedInstanceTomatoLogic
     }
     
+    override init() {
+        super.init()
+        resetSecondsLeft()
+    }
+    
     // MARK: - Public Variables -
     
     var currentTomato = 0 {
@@ -90,7 +95,7 @@ class TomatoLogic: NSObject {
     // MARK: - Public Methods -
     
     func setProgress(progress: Float) {
-        let maxSeconds = Float(self.getCurrentMaxSeconds())
+        let maxSeconds = Float(getCurrentMaxSeconds())
         secondsLeft = Int(maxSeconds) - Int(maxSeconds * progress / 100.0)
     }
     

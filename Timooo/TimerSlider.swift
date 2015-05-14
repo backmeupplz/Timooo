@@ -15,7 +15,7 @@ class TimerSlider: UISlider {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.setupNotifications()
+        setupNotifications()
     }
     
     // MARK: - Notifications -
@@ -25,6 +25,6 @@ class TimerSlider: UISlider {
     }
     
     func receivedPercentNotification(notification: NSNotification) {
-        self.value = notification.userInfo![newValueKey] as! Float
+        value = notification.userInfo![newValueKey] as! Float
     }
 }

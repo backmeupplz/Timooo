@@ -22,8 +22,8 @@ class TomatoCell: UITableViewCell {
     // MARK: - General Methods -
     
     func configure() {
-        self.layoutMargins = UIEdgeInsetsZero
-        self.preservesSuperviewLayoutMargins = false
+        layoutMargins = UIEdgeInsetsZero
+        preservesSuperviewLayoutMargins = false
         
         if (object.tomatosCount > 5) {
             for i in 1...4 {
@@ -32,10 +32,15 @@ class TomatoCell: UITableViewCell {
             multiplierLabel.hidden = false
             multiplierLabel.text = "x\(object.tomatosCount)"
         } else {
+            for i in 0...4 {
+                tomatoImages[i].hidden = true
+            }
+            
             for i in 0...object.tomatosCount-1 {
                 tomatoImages[i].hidden = false
             }
             multiplierLabel.hidden = true
+            
         }
         dateLabel.text = object.dateSring
     }

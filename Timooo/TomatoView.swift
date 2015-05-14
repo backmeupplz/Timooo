@@ -59,14 +59,14 @@ class TomatoView: UIView {
     }
     
     func receivedPercentNotification(notification: NSNotification) {
-        self.percent = notification.userInfo![newValueKey] as! Float
+        percent = notification.userInfo![newValueKey] as! Float
     }
     
     func receivedReverseNotification(notification: NSNotification) {
-        self.reverse = notification.userInfo![newValueKey] as! Bool
+        reverse = notification.userInfo![newValueKey] as! Bool
     }
     
     func receivedCurrentTomatoNotification(notification: NSNotification) {
-        self.currentTomato = notification.userInfo![newValueKey] as! Int
+        currentTomato = notification.userInfo![newValueKey] as! Int
     }
 }

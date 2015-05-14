@@ -18,7 +18,14 @@ class SideViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = MemoryManager.sharedInstance.getHistory()
+        setupNotifications()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadData()
+        tableView.reloadData()
     }
     
     // MARK: - UITableViewDataSource -
@@ -45,7 +52,36 @@ class SideViewController: UIViewController, UITableViewDataSource, UITableViewDe
             data.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation:.Fade)
             tableView.endUpdates()
-            MemoryManager.sharedInstance.deleteTomato(data[indexPath.row])
+            
+            MemoryManager.sharedInstance.deleteTomato(indexPath.row)
         }
+    }
+    
+    // MARK: - General Methods -
+    
+    func loadData() {
+        data = MemoryManager.sharedInstance.getHistory()
+    }
+    
+    // MARK: - Notifications -
+    
+    func setupNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"shouldAddTomato:", name:didAddTomato, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"shouldUpdateTomato:", name:didUpdateTomato, object: nil)
+        
+        
+    }
+    
+    func shouldAddTomato(notification: NSNotification) {
+        let object = notification.userInfo![newValueKey] as! HistoryObject
+        tableView.beginUpdates()
+        data.insert(object, atIndex: 0)
+        tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation:.Fade)
+        tableView.endUpdates()
+    }
+    
+    func shouldUpdateTomato(notification: NSNotification) {
+        loadData()
+        tableView.reloadData()
     }
 }

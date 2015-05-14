@@ -29,25 +29,7 @@ class HistoryObject: NSObject, NSCoding {
     }
     
     func encodeWithCoder(coder: NSCoder) {
-        coder.encodeObject(self.tomatosCount, forKey: "tomatosCount")
-        coder.encodeObject(self.date, forKey: "date")
-    }
-    
-    // MARK: - General Methods -
-    
-    override func isEqual(object: AnyObject?) -> Bool {
-        if (object == nil || !(object is HistoryObject)) {
-            return false
-        } else {
-            return self.date.isEqualToDate(object!.date)
-        }
-    }
-    
-    func setDate(year: Int, month: Int, day: Int) {
-        var dateComps = NSDateComponents()
-        dateComps.year = year
-        dateComps.month = month
-        dateComps.day = day
-        date = NSCalendar.currentCalendar().dateFromComponents(dateComps)!
+        coder.encodeObject(tomatosCount, forKey: "tomatosCount")
+        coder.encodeObject(date, forKey: "date")
     }
 }
