@@ -78,11 +78,12 @@ class TomatoLogic: NSObject {
     }
     
     func tick() {
-        println("tick")
-        
         secondsLeft--
         if (secondsLeft < 0) {
             nextCycle()
+            if (reverse) {
+                MemoryManager.sharedInstance.addTomato()
+            }
         }
     }
     
@@ -94,22 +95,18 @@ class TomatoLogic: NSObject {
     }
     
     func stop() {
-        println("STOP")
         resetSecondsLeft()
     }
     
     func pause() {
-        println("PAUSE")
         stopTimer()
     }
     
     func play() {
-        println("PLAY")
         startTimer()
     }
     
     func next() {
-        println("NEXT")
         nextCycle()
     }
     

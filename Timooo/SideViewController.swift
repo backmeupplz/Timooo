@@ -11,25 +11,14 @@ import Foundation
 class SideViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-    var data = [HistoryObject]()
+    var data: [HistoryObject]!
     
     // MARK: - VC Life Cycle -
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        generateFakeData()
-    }
-    
-    // MARK: - General Methods -
-    
-    func generateFakeData() {
-        for number in 1...20 {
-            var object = HistoryObject()
-            object.setDate(2015, month: 1, day: 21-number)
-            object.tomatosCount = Int(arc4random_uniform(7)+1)
-            data.append(object)
-        }
+        data = MemoryManager.sharedInstance.getHistory()
     }
     
     // MARK: - UITableViewDataSource -
@@ -52,7 +41,11 @@ class SideViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == .Delete) {
-            // TODO: Delete pomodoro
+            tableView.beginUpdates()
+            data.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation:.Fade)
+            tableView.endUpdates()
+            MemoryManager.sharedInstance.deleteTomato(data[indexPath.row])
         }
     }
 }
