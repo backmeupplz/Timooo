@@ -15,15 +15,14 @@ class TimerLabel: UILabel {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.fixLabelAutoshrink()
-        self.setupNotifications()
+        fixLabelAutoshrink()
+        setupNotifications()
     }
     
     // MARK: - General Methods -
     
     func fixLabelAutoshrink() {
-//        self.baselineAdjustment = .AlignCenters
-        self.adjustsFontSizeToFitWidth = true
+        adjustsFontSizeToFitWidth = true
     }
     
     // MARK: - Notifications -
@@ -33,6 +32,6 @@ class TimerLabel: UILabel {
     }
     
     func receivedTimeNotification(notification: NSNotification) {
-        self.text = notification.userInfo![newValueKey] as? String
+        text = notification.userInfo![newValueKey] as? String
     }
 }

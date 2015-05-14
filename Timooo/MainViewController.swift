@@ -19,14 +19,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
     }
     
     // MARK: - IB Actions -
     
     @IBAction func toggleSideMenu(sender: AnyObject) {
-        self.revealViewController().revealToggle(sender)
+        revealViewController().revealToggle(sender)
     }
     
     @IBAction func toggleSound(sender: UIButton) {
@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func changePercent(sender: UISlider) {
-        TomatoLogic.sharedInstance.setPercentage(sender.value)
+        TomatoLogic.sharedInstance.setProgress(sender.value)
     }
 
     @IBAction func stopTimer(sender: AnyObject) {

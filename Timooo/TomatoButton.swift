@@ -59,12 +59,12 @@ class TomatoButton: UIButton {
     func checkState() {
         switch tomatoState! {
         case .Running:
-            backgroundColor = UIColor(white: 1.0, alpha: 0.7)
+            backgroundColor = UIColor(white:1.0, alpha:0.7)
             self.setupRunning()
         case .Finished:
-            backgroundColor = UIColor.blackColor()
+            backgroundColor = UIColor(white:0.0, alpha:0.7)
         default:
-            backgroundColor = UIColor(white: 1.0, alpha: 0.7)
+            backgroundColor = UIColor(white:1.0, alpha:0.7)
         }
     }
     
@@ -72,7 +72,7 @@ class TomatoButton: UIButton {
         var startPoint: CGFloat?
         var endPoint: CGFloat?
         if (!self.reverse!) {
-            startPoint = CGFloat(3.0 * M_PI_2)
+            startPoint = CGFloat(-M_PI_2)
             endPoint = CGFloat(2 * M_PI) * CGFloat(percent!/100.0) - CGFloat(M_PI_2)
         } else {
             startPoint = CGFloat(2.0 * M_PI) * CGFloat(percent!/100.0) - CGFloat(M_PI_2)

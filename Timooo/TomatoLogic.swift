@@ -26,28 +26,33 @@ class TomatoLogic: NSObject {
     
     // MARK: - Public Variables -
     
-    var percent: Float = 0.0 {
-        didSet {
-            NSNotificationCenter.defaultCenter().postNotificationName(didChangePercentNotification, object: nil, userInfo:[newValueKey:percent])
-        }
-    }
-    var currentTomato: Int = 0 {
+    var currentTomato = 0 {
         didSet {
             NSNotificationCenter.defaultCenter().postNotificationName(didChangeCurrentTomatoNotification, object: nil, userInfo:[newValueKey:currentTomato])
             reverse = false
-            timeString = "0:00"
-            self.updatePercentage()
+            resetSecondsLeft()
         }
     }
     
     // MARK: - Private Variables -
     
-    var reverse: Bool = false {
+    var secondsLeft = 0 {
+        didSet {
+            updateTimeString()
+            updatePercentage()
+        }
+    }
+    var percent: Float = 0.0 {
+        didSet {
+            NSNotificationCenter.defaultCenter().postNotificationName(didChangePercentNotification, object: nil, userInfo:[newValueKey:percent])
+        }
+    }
+    var reverse = false {
         didSet {
             NSNotificationCenter.defaultCenter().postNotificationName(didChangeReverseNotification, object: nil, userInfo:[newValueKey:reverse])
         }
     }
-    var timeString: String = "0:00" {
+    var timeString = "0:00" {
         didSet {
             NSNotificationCenter.defaultCenter().postNotificationName(didChangeTimeNotification, object: nil, userInfo:[newValueKey:timeString])
         }
@@ -75,53 +80,71 @@ class TomatoLogic: NSObject {
     func tick() {
         println("tick")
         
-        self.incrementTimeString()
-        self.checkTimeString()
-        self.updatePercentage()
+        secondsLeft--
+        if (secondsLeft < 0) {
+            nextCycle()
+        }
     }
     
     // MARK: - Public Methods -
     
-    func setPercentage(perc: Float) {
-        self.percent = perc
-        self.updateTimeString()
+    func setProgress(progress: Float) {
+        let maxSeconds = Float(self.getCurrentMaxSeconds())
+        secondsLeft = Int(maxSeconds) - Int(maxSeconds * progress / 100.0)
     }
     
     func stop() {
         println("STOP")
+        resetSecondsLeft()
     }
     
     func pause() {
         println("PAUSE")
-        self.stopTimer()
+        stopTimer()
     }
     
     func play() {
         println("PLAY")
-        self.startTimer()
+        startTimer()
     }
     
     func next() {
         println("NEXT")
+        nextCycle()
     }
     
     // MARK: - General Methods -
     
+    func nextCycle() {
+        if (!reverse) {
+            reverse = true
+            resetSecondsLeft()
+        } else {
+            if (currentTomato >= 3) {
+                currentTomato = 0
+            } else {
+                currentTomato++
+            }
+        }
+    }
+    
+    func resetSecondsLeft() {
+        secondsLeft = getCurrentMaxSeconds()
+    }
+    
     func updatePercentage() {
-        let maxSeconds = self.getCurrentMaxSeconds()
-        let currentSeconds = self.convertTimeStringToSeconds(self.timeString)
-        
-        self.percent = (Float(currentSeconds)/Float(maxSeconds))*100.0
+        let maxSeconds = Float(getCurrentMaxSeconds())
+        let currentSeconds = maxSeconds - Float(secondsLeft)
+        percent = currentSeconds/maxSeconds*100.0
     }
     
     func updateTimeString() {
-        let maxSeconds = Float(self.getCurrentMaxSeconds())
-        self.timeString = self.convertSecondsToTimeString(Int(maxSeconds*(self.percent/100.0)))
+        timeString = convertSecondsToTimeString(secondsLeft)
     }
     
     func getCurrentMaxSeconds() -> Int {
-        if (self.reverse) {
-            if (self.currentTomato == 3) {
+        if (reverse) {
+            if (currentTomato == 3) {
                 return 30*60
             } else {
                 return 5*60
@@ -129,17 +152,6 @@ class TomatoLogic: NSObject {
         } else {
             return 25*60
         }
-    }
-    
-    func incrementTimeString() {
-        var seconds = self.convertTimeStringToSeconds(self.timeString)
-        seconds++
-        self.timeString = self.convertSecondsToTimeString(seconds)
-    }
-    
-    func checkTimeString() {
-        let currentSeconds = self.convertTimeStringToSeconds(self.timeString)
-        let maxSeconds = self.getCurrentMaxSeconds()
     }
     
     func convertSecondsToTimeString(totalSeconds: Int) -> String {
@@ -156,12 +168,5 @@ class TomatoLogic: NSObject {
         else {
             return "\(strMinutes):\(strSeconds)"
         }
-    }
-    
-    func convertTimeStringToSeconds(timeString: String) -> Int {
-        let tokens = timeString.componentsSeparatedByString(":")
-        let minutes = tokens[0].toInt()
-        let seconds = tokens[1].toInt()
-        return (minutes!*60) + seconds!
     }
 }

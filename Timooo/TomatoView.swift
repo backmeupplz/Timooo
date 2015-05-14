@@ -13,7 +13,7 @@ class TomatoView: UIView {
     
     var currentTomato: Int = 0 {
         didSet {
-            self.changedCurrentTomato()
+            changedCurrentTomato()
         }
     }
     var reverse: Bool = false {
@@ -32,7 +32,8 @@ class TomatoView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.setupNotifications()
+        setupNotifications()
+        changedCurrentTomato()
     }
     
     // MARK: - General Methods -
