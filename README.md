@@ -1,5 +1,5 @@
-# Timooo
+![Timooo](https://github.com/backmeupplz/Timooo/blob/master/Designs/github-title.png)
 
-Here's the readme file to explain what's inside
 
-![nice kitten](http://theheightsanimalhospital.com/clients/15389/images/playful-kitten-6683.jpg)
+
+![iTunes Connect Stats](https://github.com/backmeupplz/Timooo/blob/master/Designs/github-stats.png)
