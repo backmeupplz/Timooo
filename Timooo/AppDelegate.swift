@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - General Methods -
     
     func setupGoogleAnalytics() {
-        GAI.sharedInstance().trackerWithTrackingId("UA-43367175-5")
+        GAI.sharedInstance().trackerWithTrackingId("UA-43367175-13")
     }
 }
 
