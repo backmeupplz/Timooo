@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gXw-E8-Qaj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gXw-E8-Qaj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -470,10 +470,10 @@
                                     <constraint firstItem="f3b-PH-86S" firstAttribute="top" secondItem="LCl-eT-kUS" secondAttribute="top" constant="71" id="rz2-3D-rco"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="tomatoButtons" destination="f3b-PH-86S" id="AZl-18-jUk"/>
-                                    <outletCollection property="tomatoButtons" destination="kB9-Wo-4eT" id="pTI-Bc-M9m"/>
-                                    <outletCollection property="tomatoButtons" destination="aGH-JX-Hot" id="RCw-I4-ioz"/>
-                                    <outletCollection property="tomatoButtons" destination="X7z-Zj-OwV" id="k11-60-tdL"/>
+                                    <outletCollection property="tomatoButtons" destination="f3b-PH-86S" collectionClass="NSMutableArray" id="AZl-18-jUk"/>
+                                    <outletCollection property="tomatoButtons" destination="kB9-Wo-4eT" collectionClass="NSMutableArray" id="pTI-Bc-M9m"/>
+                                    <outletCollection property="tomatoButtons" destination="aGH-JX-Hot" collectionClass="NSMutableArray" id="RCw-I4-ioz"/>
+                                    <outletCollection property="tomatoButtons" destination="X7z-Zj-OwV" collectionClass="NSMutableArray" id="k11-60-tdL"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -533,6 +533,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="audioButton" destination="3CN-hG-xzL" id="Wco-hf-2Sc"/>
                         <outlet property="pauseButton" destination="rxr-G7-8fQ" id="yqK-mH-fr2"/>
                         <outlet property="playButton" destination="JjJ-i4-AY0" id="Z4N-Vd-g4g"/>
                         <outlet property="slider" destination="2ao-p0-3BM" id="JVu-iY-ztU"/>

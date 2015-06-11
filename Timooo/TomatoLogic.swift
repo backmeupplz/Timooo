@@ -69,7 +69,6 @@ class TomatoLogic: NSObject {
     
     func startTimer() {
         if (!timer.valid) {
-            
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01,
                 target: TomatoLogic.sharedInstance,
                 selector: Selector("tick"),
@@ -128,6 +127,7 @@ class TomatoLogic: NSObject {
                 currentTomato++
             }
         }
+        AudioManager.sharedInstance.playTimerBeep()
     }
     
     func resetSecondsLeft() {

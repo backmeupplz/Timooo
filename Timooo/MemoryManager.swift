@@ -11,6 +11,7 @@ import Foundation
 let didAddTomato = "didAddTomato"
 let didUpdateTomato = "didUpdateTomato"
 let UDHistory = "UDHistory"
+let UDAudioEnabled = "UDAudioEnabled"
 
 private let _sharedInstanceMemoryManager = MemoryManager()
 
@@ -93,6 +94,14 @@ class MemoryManager {
             array.removeAtIndex(index)
             defaults.setObject(NSKeyedArchiver.archivedDataWithRootObject(array), forKey:UDHistory)
         }
+    }
+    
+    func setAudioManagerState(enabled: Bool) {
+        NSUserDefaults.standardUserDefaults().setBool(enabled, forKey: UDAudioEnabled)
+    }
+    
+    func getAudioManagerState() -> Bool {
+        return NSUserDefaults.standardUserDefaults().boolForKey(UDAudioEnabled)
     }
     
     // MARK: - General Methods -

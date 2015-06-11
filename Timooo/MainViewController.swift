@@ -13,14 +13,15 @@ class MainViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var audioButton: UIButton!
     
     // MARK: - VC Life cycle -
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
-        view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
+        setupGestures()
+        setupAudioButton()
     }
     
     // MARK: - IB Actions -
@@ -32,6 +33,7 @@ class MainViewController: UIViewController {
     @IBAction func toggleSound(sender: UIButton) {
         AudioManager.sharedInstance.enabled = sender.selected
         sender.selected = !sender.selected
+        MemoryManager.sharedInstance.setAudioManagerState(!sender.selected)
     }
     
     @IBAction func selectTomato(sender: UIButton) {
@@ -60,6 +62,17 @@ class MainViewController: UIViewController {
     
     @IBAction func nextTimer(sender: AnyObject) {
         TomatoLogic.sharedInstance.next()
+    }
+    
+    // MARK: - General Methods -
+    
+    func setupGestures() {
+        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
+    }
+    
+    func setupAudioButton() {
+        audioButton.selected = !MemoryManager.sharedInstance.getAudioManagerState()
     }
 }
 
