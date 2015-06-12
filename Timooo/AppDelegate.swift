@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         setupGoogleAnalytics()
+        registerForNotifications(application)
         
         return true
     }
@@ -29,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupGoogleAnalytics() {
         GAI.sharedInstance().trackerWithTrackingId("UA-43367175-13")
+    }
+    
+    func registerForNotifications(application: UIApplication) {
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound |
+            UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
     }
 }
 

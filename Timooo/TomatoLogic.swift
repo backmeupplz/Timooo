@@ -230,4 +230,18 @@ class TomatoLogic: NSObject {
             
         }
     }
+    
+    func scheduleWorkNotification(delay: Int) {
+        var notification = UILocalNotification()
+        notification.alertBody = NSLocalizedString("It's time to work!", comment: "")
+        notification.fireDate = NSDate(timeIntervalSince1970: NSDate().timeIntervalSince1970 + NSTimeInterval(delay))
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+    
+    func scheduleRestNotification(delay: Int) {
+        var notification = UILocalNotification()
+        notification.alertBody = NSLocalizedString("Great work! Time to have a rest!", comment: "")
+        notification.fireDate = NSDate(timeIntervalSince1970: NSDate().timeIntervalSince1970 + NSTimeInterval(delay))
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
 }
