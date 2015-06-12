@@ -24,7 +24,7 @@ class TomatoCell: UITableViewCell {
     func configure() {
         layoutMargins = UIEdgeInsetsZero
         preservesSuperviewLayoutMargins = false
-        
+        self.backgroundColor = UIColor.clearColor()
         if (object.tomatosCount > 5) {
             for i in 1...4 {
                 tomatoImages[i].hidden = true
