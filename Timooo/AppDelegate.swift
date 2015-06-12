@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func applicationWillTerminate(application: UIApplication) {
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        println("App got terminated");
+    }
+    
     // MARK: - General Methods -
     
     func setupGoogleAnalytics() {

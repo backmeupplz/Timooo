@@ -15,6 +15,7 @@ let didChangeCurrentTomatoNotification = "didChangeCurrentTomatoNotification"
 let didChangeReverseNotification = "didChangeReverseNotification"
 let didChangeTimeNotification = "didChangeTimeNotification"
 let newValueKey = "newValueKey"
+let UDTimerTimestamp = "UDTimerTimestamp"
 
 class TomatoLogic: NSObject {
     
@@ -27,6 +28,7 @@ class TomatoLogic: NSObject {
     override init() {
         super.init()
         resetSecondsLeft()
+        setupNotifications()
     }
     
     // MARK: - Public Variables -
@@ -89,6 +91,23 @@ class TomatoLogic: NSObject {
                 MemoryManager.sharedInstance.addTomato()
             }
         }
+    }
+    
+    // MARK: - Notifications -
+    
+    func setupNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("appDidEnterBackground:"), name:UIApplicationDidEnterBackgroundNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("appDidBecomeActive:"), name:UIApplicationDidBecomeActiveNotification, object: nil)
+    }
+    
+    func appDidEnterBackground(notification : NSNotification) {
+        println("appDidEnterBackground method called")
+        saveTimers()
+    }
+    
+    func appDidBecomeActive(notification : NSNotification) {
+        println("appDidBecomeActive method called")
+        restoreTimers()
     }
     
     // MARK: - Public Methods -
@@ -170,5 +189,32 @@ class TomatoLogic: NSObject {
         else {
             return "\(strMinutes):\(strSeconds)"
         }
+    }
+    
+    func saveTimers() {
+        NSUserDefaults.standardUserDefaults().setObject(NSDate().timeIntervalSince1970, forKey: UDTimerTimestamp)
+    }
+    
+    func restoreTimers() {
+        var timestampObject: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey(UDTimerTimestamp)
+        if (timestampObject == nil) {
+            return
+        }
+        var interval = Int(NSDate().timeIntervalSince1970) - timestampObject!.integerValue!
+        
+        let tempAudio = AudioManager.sharedInstance.enabled
+        AudioManager.sharedInstance.enabled = false
+        
+        while (interval > 0) {
+            if (interval > secondsLeft) {
+                interval -= secondsLeft
+                next()
+            } else {
+                secondsLeft -= interval
+                interval = 0
+            }
+        }
+        
+        AudioManager.sharedInstance.enabled = tempAudio
     }
 }
