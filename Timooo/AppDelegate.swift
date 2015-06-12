@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         setupGoogleAnalytics()
         registerForNotifications(application)
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
         
         return true
     }
@@ -24,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         UIApplication.sharedApplication().cancelAllLocalNotifications()
         println("App got terminated");
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
     }
     
     // MARK: - General Methods -

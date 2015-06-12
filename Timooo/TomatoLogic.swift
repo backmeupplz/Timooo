@@ -17,6 +17,10 @@ let didChangeTimeNotification = "didChangeTimeNotification"
 let newValueKey = "newValueKey"
 let UDTimerTimestamp = "UDTimerTimestamp"
 
+let workPeriod = 25*60
+let restPeriod = 5*60
+let longRestPeriod = 30*60
+
 class TomatoLogic: NSObject {
     
     // MARK: - Singleton -
@@ -167,12 +171,12 @@ class TomatoLogic: NSObject {
     func getCurrentMaxSeconds() -> Int {
         if (reverse) {
             if (currentTomato == 3) {
-                return 30*60
+                return longRestPeriod
             } else {
-                return 5*60
+                return restPeriod
             }
         } else {
-            return 25*60
+            return workPeriod
         }
     }
     
@@ -228,6 +232,32 @@ class TomatoLogic: NSObject {
         if (timer.valid) {
             println("scheduleLocalNotifications method called")
             
+            var seconds = secondsLeft
+            var toma = currentTomato
+            var rev = reverse
+            
+            for _ in 0...39 {
+                
+                if (!rev) {
+                    if (toma != 3) {
+                        scheduleRestNotification(seconds)
+                        seconds += restPeriod
+                        rev = true
+                    } else {
+                        scheduleRestNotification(seconds)
+                        seconds += longRestPeriod
+                        rev = true
+                    }
+                } else {
+                    scheduleWorkNotification(seconds)
+                    seconds += workPeriod
+                    rev = false
+                    toma++
+                    if toma > 3 {
+                        toma = 0
+                    }
+                }
+            }
         }
     }
     
