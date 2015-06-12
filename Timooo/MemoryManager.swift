@@ -97,11 +97,11 @@ class MemoryManager {
     }
     
     func setAudioManagerState(enabled: Bool) {
-        NSUserDefaults.standardUserDefaults().setBool(enabled, forKey: UDAudioEnabled)
+        NSUserDefaults.standardUserDefaults().setBool(!enabled, forKey: UDAudioEnabled)
     }
     
     func getAudioManagerState() -> Bool {
-        return NSUserDefaults.standardUserDefaults().boolForKey(UDAudioEnabled)
+        return !NSUserDefaults.standardUserDefaults().boolForKey(UDAudioEnabled)
     }
     
     // MARK: - General Methods -

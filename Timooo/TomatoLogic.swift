@@ -71,7 +71,7 @@ class TomatoLogic: NSObject {
     
     func startTimer() {
         if (!timer.valid) {
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.01,
+            timer = NSTimer.scheduledTimerWithTimeInterval(1,
                 target: TomatoLogic.sharedInstance,
                 selector: Selector("tick"),
                 userInfo: nil,
@@ -103,6 +103,7 @@ class TomatoLogic: NSObject {
     func appDidEnterBackground(notification : NSNotification) {
         println("appDidEnterBackground method called")
         saveTimers()
+        scheduleLocalNotifications()
     }
     
     func appDidBecomeActive(notification : NSNotification) {
@@ -191,30 +192,42 @@ class TomatoLogic: NSObject {
         }
     }
     
+    // MARK: - Background -
+    
     func saveTimers() {
         NSUserDefaults.standardUserDefaults().setObject(NSDate().timeIntervalSince1970, forKey: UDTimerTimestamp)
     }
     
     func restoreTimers() {
-        var timestampObject: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey(UDTimerTimestamp)
-        if (timestampObject == nil) {
-            return
-        }
-        var interval = Int(NSDate().timeIntervalSince1970) - timestampObject!.integerValue!
-        
-        let tempAudio = AudioManager.sharedInstance.enabled
-        AudioManager.sharedInstance.enabled = false
-        
-        while (interval > 0) {
-            if (interval > secondsLeft) {
-                interval -= secondsLeft
-                next()
-            } else {
-                secondsLeft -= interval
-                interval = 0
+        if (timer.valid) {
+            var timestampObject: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey(UDTimerTimestamp)
+            if (timestampObject == nil) {
+                return
             }
+            var interval = Int(NSDate().timeIntervalSince1970) - timestampObject!.integerValue!
+            
+            let tempAudio = AudioManager.sharedInstance.enabled
+            AudioManager.sharedInstance.enabled = false
+            
+            while (interval > 0) {
+                if (interval > secondsLeft) {
+                    interval -= secondsLeft
+                    next()
+                } else {
+                    secondsLeft -= interval
+                    interval = 0
+                }
+            }
+            
+            AudioManager.sharedInstance.enabled = tempAudio
         }
-        
-        AudioManager.sharedInstance.enabled = tempAudio
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: UDTimerTimestamp)
+    }
+    
+    func scheduleLocalNotifications() {
+        if (timer.valid) {
+            println("scheduleLocalNotifications method called")
+            
+        }
     }
 }
