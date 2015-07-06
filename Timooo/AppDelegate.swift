@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -15,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - App Life Cycle -
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        setupGoogleAnalytics()
         registerForNotifications(application)
         UIApplication.sharedApplication().cancelAllLocalNotifications()
+        setupAppirater()
         
         return true
     }
@@ -31,10 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().cancelAllLocalNotifications()
     }
     
+    func applicationWillEnterForeground(application: UIApplication) {
+        Appirater.appEnteredForeground(true)
+    }
+    
     // MARK: - General Methods -
     
-    func setupGoogleAnalytics() {
-        GAI.sharedInstance().trackerWithTrackingId("UA-43367175-13")
+    func setupAppirater() {
+        Appirater.setAppId("775844265")
+        Appirater.appLaunched(true)
+        Appirater.setUsesUntilPrompt(5)
     }
     
     func registerForNotifications(application: UIApplication) {
