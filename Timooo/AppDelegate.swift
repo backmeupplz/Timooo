@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - App Life Cycle -
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        application.idleTimerDisabled = true
         registerForNotifications(application)
         UIApplication.sharedApplication().cancelAllLocalNotifications()
         setupAppirater()
