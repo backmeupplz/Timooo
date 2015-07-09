@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Timooo Widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Timooo-En.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>B33579131A9C246D002BF317</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B3F6D0E31B4B4CCA00620808</key>
 		<dict>
 			<key>primary</key>
 			<true/>

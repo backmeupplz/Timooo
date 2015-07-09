@@ -27,6 +27,11 @@
 		B3C726EE1AA5588B0034EACD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C726ED1AA5588B0034EACD /* AVFoundation.framework */; };
 		B3F0B07C1B04300200D21823 /* MemoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F0B07B1B04300200D21823 /* MemoryManager.swift */; };
 		B3F130041A9E85D100C07685 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3F130061A9E85D100C07685 /* Localizable.strings */; };
+		B3F6D0E61B4B4CCA00620808 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F6D0E51B4B4CCA00620808 /* NotificationCenter.framework */; };
+		B3F6D0EB1B4B4CCB00620808 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6D0EA1B4B4CCB00620808 /* TodayViewController.swift */; };
+		B3F6D0ED1B4B4CCB00620808 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F6D0EC1B4B4CCB00620808 /* MainInterface.storyboard */; };
+		B3F6D0F01B4B4CCB00620808 /* Timooo Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B3F6D0E41B4B4CCA00620808 /* Timooo Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B3F6D0F81B4B55B700620808 /* TodayExtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6D0F71B4B55B700620808 /* TodayExtensionManager.swift */; };
 		B3FCDDB31AA52F8B001CEA3E /* TomatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +43,28 @@
 			remoteGlobalIDString = B33578FE1A9C246D002BF317;
 			remoteInfo = Timooo;
 		};
+		B3F6D0EE1B4B4CCB00620808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B33578F71A9C246D002BF317 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F6D0E31B4B4CCA00620808;
+			remoteInfo = "Timooo Widget";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3F6D0F41B4B4CCB00620808 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B3F6D0F01B4B4CCB00620808 /* Timooo Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2885F9B52A4DD9AF7CDBFE78 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +96,14 @@
 		B3F130011A9E855300C07685 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B3F130051A9E85D100C07685 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B3F130071A9E85D600C07685 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B3F6D0E41B4B4CCA00620808 /* Timooo Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Timooo Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F6D0E51B4B4CCA00620808 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B3F6D0E91B4B4CCB00620808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F6D0EA1B4B4CCB00620808 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		B3F6D0EC1B4B4CCB00620808 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		B3F6D0F51B4B545800620808 /* Timooo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Timooo.entitlements; sourceTree = "<group>"; };
+		B3F6D0F61B4B553E00620808 /* Timooo Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Timooo Widget.entitlements"; sourceTree = "<group>"; };
+		B3F6D0F71B4B55B700620808 /* TodayExtensionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayExtensionManager.swift; sourceTree = "<group>"; };
 		B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomatoView.swift; sourceTree = "<group>"; };
 		D3F28620950E097CC430C274 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +125,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3F6D0E11B4B4CCA00620808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F6D0E61B4B4CCA00620808 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,6 +141,7 @@
 			children = (
 				B3C726ED1AA5588B0034EACD /* AVFoundation.framework */,
 				D3F28620950E097CC430C274 /* libPods.a */,
+				B3F6D0E51B4B4CCA00620808 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,6 +151,7 @@
 			children = (
 				B33579011A9C246D002BF317 /* Timooo */,
 				B33579171A9C246D002BF317 /* TimoooTests */,
+				B3F6D0E71B4B4CCB00620808 /* Timooo Widget */,
 				B33579001A9C246D002BF317 /* Products */,
 				CA8FE6B6EA7CFAAB613AE054 /* Pods */,
 				0009E667C30A245F833288D0 /* Frameworks */,
@@ -119,6 +163,7 @@
 			children = (
 				B33578FF1A9C246D002BF317 /* Timooo.app */,
 				B33579141A9C246D002BF317 /* TimoooTests.xctest */,
+				B3F6D0E41B4B4CCA00620808 /* Timooo Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +171,7 @@
 		B33579011A9C246D002BF317 /* Timooo */ = {
 			isa = PBXGroup;
 			children = (
+				B3F6D0F51B4B545800620808 /* Timooo.entitlements */,
 				B335792B1A9C26FA002BF317 /* UI */,
 				B335792A1A9C26F1002BF317 /* Controller */,
 				B33579291A9C26EE002BF317 /* Model */,
@@ -185,6 +231,7 @@
 				B3C726E91AA556BB0034EACD /* AudioManager.swift */,
 				B320B9361AA6851300CC04B2 /* HistoryObject.swift */,
 				B3F0B07B1B04300200D21823 /* MemoryManager.swift */,
+				B3F6D0F71B4B55B700620808 /* TodayExtensionManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -205,6 +252,25 @@
 				B335790D1A9C246D002BF317 /* LaunchScreen.xib */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		B3F6D0E71B4B4CCB00620808 /* Timooo Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B3F6D0F61B4B553E00620808 /* Timooo Widget.entitlements */,
+				B3F6D0EA1B4B4CCB00620808 /* TodayViewController.swift */,
+				B3F6D0EC1B4B4CCB00620808 /* MainInterface.storyboard */,
+				B3F6D0E81B4B4CCB00620808 /* Supporting Files */,
+			);
+			path = "Timooo Widget";
+			sourceTree = "<group>";
+		};
+		B3F6D0E81B4B4CCB00620808 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3F6D0E91B4B4CCB00620808 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CA8FE6B6EA7CFAAB613AE054 /* Pods */ = {
@@ -228,10 +294,12 @@
 				B33578FC1A9C246D002BF317 /* Frameworks */,
 				B33578FD1A9C246D002BF317 /* Resources */,
 				78363B971A157164608F5C4F /* Copy Pods Resources */,
+				B3F6D0F41B4B4CCB00620808 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B3F6D0EF1B4B4CCB00620808 /* PBXTargetDependency */,
 			);
 			name = Timooo;
 			productName = Timooo;
@@ -256,6 +324,23 @@
 			productReference = B33579141A9C246D002BF317 /* TimoooTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B3F6D0E31B4B4CCA00620808 /* Timooo Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F6D0F31B4B4CCB00620808 /* Build configuration list for PBXNativeTarget "Timooo Widget" */;
+			buildPhases = (
+				B3F6D0E01B4B4CCA00620808 /* Sources */,
+				B3F6D0E11B4B4CCA00620808 /* Frameworks */,
+				B3F6D0E21B4B4CCA00620808 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Timooo Widget";
+			productName = "Timooo Widget";
+			productReference = B3F6D0E41B4B4CCA00620808 /* Timooo Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,10 +353,24 @@
 					B33578FE1A9C246D002BF317 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 9VUB6L23QH;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B33579131A9C246D002BF317 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = B33578FE1A9C246D002BF317;
+					};
+					B3F6D0E31B4B4CCA00620808 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9VUB6L23QH;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -290,6 +389,7 @@
 			targets = (
 				B33578FE1A9C246D002BF317 /* Timooo */,
 				B33579131A9C246D002BF317 /* TimoooTests */,
+				B3F6D0E31B4B4CCA00620808 /* Timooo Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -311,6 +411,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F6D0E21B4B4CCA00620808 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F6D0ED1B4B4CCB00620808 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +473,7 @@
 				B320B9371AA6851300CC04B2 /* HistoryObject.swift in Sources */,
 				B3C726EA1AA556BB0034EACD /* AudioManager.swift in Sources */,
 				B33579051A9C246D002BF317 /* AppDelegate.swift in Sources */,
+				B3F6D0F81B4B55B700620808 /* TodayExtensionManager.swift in Sources */,
 				B3F0B07C1B04300200D21823 /* MemoryManager.swift in Sources */,
 				B3C726E41AA53ADE0034EACD /* TomatoLogic.swift in Sources */,
 			);
@@ -378,6 +487,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3F6D0E01B4B4CCA00620808 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F6D0EB1B4B4CCB00620808 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -385,6 +502,11 @@
 			isa = PBXTargetDependency;
 			target = B33578FE1A9C246D002BF317 /* Timooo */;
 			targetProxy = B33579151A9C246D002BF317 /* PBXContainerItemProxy */;
+		};
+		B3F6D0EF1B4B4CCB00620808 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F6D0E31B4B4CCA00620808 /* Timooo Widget */;
+			targetProxy = B3F6D0EE1B4B4CCB00620808 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -504,12 +626,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_ENTITLEMENTS = Timooo/Timooo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Timooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a225a3a2-8d6e-46b7-816a-4b1f8155879a";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Timooo/Timooo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -521,12 +644,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_ENTITLEMENTS = Timooo/Timooo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Timooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a225a3a2-8d6e-46b7-816a-4b1f8155879a";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Timooo/Timooo-Bridging-Header.h";
 			};
 			name = Release;
@@ -565,6 +689,45 @@
 			};
 			name = Release;
 		};
+		B3F6D0F11B4B4CCB00620808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Timooo Widget/Timooo Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Timooo Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B3F6D0F21B4B4CCB00620808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Timooo Widget/Timooo Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Timooo Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,6 +757,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B3F6D0F31B4B4CCB00620808 /* Build configuration list for PBXNativeTarget "Timooo Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F6D0F11B4B4CCB00620808 /* Debug */,
+				B3F6D0F21B4B4CCB00620808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
