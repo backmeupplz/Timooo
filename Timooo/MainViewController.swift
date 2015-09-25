@@ -27,7 +27,10 @@ class MainViewController: UIViewController {
     // MARK: - IB Actions -
     
     @IBAction func toggleSideMenu(sender: AnyObject) {
-        revealViewController().revealToggle(sender)
+        
+        (UIApplication.sharedApplication().delegate?.window??.rootViewController as? ContainerViewController)?.showLeftViewAnimated(true, completionHandler: nil)
+        
+        (UIApplication.sharedApplication().delegate?.window??.rootViewController as? ContainerViewController)?.hideLeftViewAnimated(true, completionHandler: nil)
     }
     
     @IBAction func toggleSound(sender: UIButton) {
@@ -67,8 +70,8 @@ class MainViewController: UIViewController {
     // MARK: - General Methods -
     
     func setupGestures() {
-        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
-        view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
+//        view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+//        view.addGestureRecognizer(revealViewController().tapGestureRecognizer())
     }
     
     func setupAudioButton() {

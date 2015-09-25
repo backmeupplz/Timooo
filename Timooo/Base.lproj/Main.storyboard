@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gXw-E8-Qaj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PX2-Qn-i3J">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -7,38 +7,16 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Reveal View Controller-->
-        <scene sceneID="RFp-bC-NNi">
-            <objects>
-                <viewController id="gXw-E8-Qaj" customClass="SWRevealViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lzO-Qc-3jT"/>
-                        <viewControllerLayoutGuide type="bottom" id="3NX-gi-MEZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ikd-5X-OV1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="78P-db-8gc"/>
-                        <segue destination="21e-68-mRo" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="DAo-JT-bkn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rwV-tk-EN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-171" y="317"/>
-        </scene>
         <!--Side View Controller-->
         <scene sceneID="5BS-GD-qqY">
             <objects>
-                <viewController id="21e-68-mRo" customClass="SideViewController" customModule="Timooo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideViewController" id="21e-68-mRo" customClass="SideViewController" customModule="Timooo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nwh-yj-kPz"/>
                         <viewControllerLayoutGuide type="bottom" id="OQN-Wh-ipo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FB9-4L-Nyt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZQm-PX-f6y">
@@ -152,18 +130,38 @@
                             <constraint firstItem="ZQm-PX-f6y" firstAttribute="top" secondItem="Nwh-yj-kPz" secondAttribute="bottom" id="I9O-fA-eGS"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="260" height="600"/>
                     <connections>
                         <outlet property="tableView" destination="ZQm-PX-f6y" id="FHT-aQ-npM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAg-t2-NoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="-401"/>
+            <point key="canvasLocation" x="378" y="-14"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="7TU-Dc-R0q">
+            <objects>
+                <viewController storyboardIdentifier="ContainerViewController" id="PX2-Qn-i3J" customClass="ContainerViewController" customModule="Timooo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9RQ-pj-5Qd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eug-65-VLT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JlR-OA-Ut3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3q-kE-aDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="-14"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Timooo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Timooo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -542,7 +540,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="317"/>
+            <point key="canvasLocation" x="857" y="-14"/>
         </scene>
     </scenes>
     <resources>
