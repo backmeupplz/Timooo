@@ -105,13 +105,13 @@ class TomatoLogic: NSObject {
     }
     
     func appDidEnterBackground(notification : NSNotification) {
-        println("appDidEnterBackground method called")
+        print("appDidEnterBackground method called")
         saveTimers()
         scheduleLocalNotifications()
     }
     
     func appDidBecomeActive(notification : NSNotification) {
-        println("appDidBecomeActive method called")
+        print("appDidBecomeActive method called")
         restoreTimers()
     }
     
@@ -204,7 +204,7 @@ class TomatoLogic: NSObject {
     
     func restoreTimers() {
         if (timer.valid) {
-            var timestampObject: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey(UDTimerTimestamp)
+            let timestampObject: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey(UDTimerTimestamp)
             if (timestampObject == nil) {
                 return
             }
@@ -230,7 +230,7 @@ class TomatoLogic: NSObject {
     
     func scheduleLocalNotifications() {
         if (timer.valid) {
-            println("scheduleLocalNotifications method called")
+            print("scheduleLocalNotifications method called")
             
             var seconds = secondsLeft
             var toma = currentTomato
@@ -262,14 +262,14 @@ class TomatoLogic: NSObject {
     }
     
     func scheduleWorkNotification(delay: Int) {
-        var notification = UILocalNotification()
+        let notification = UILocalNotification()
         notification.alertBody = NSLocalizedString("It's time to work!", comment: "")
         notification.fireDate = NSDate(timeIntervalSince1970: NSDate().timeIntervalSince1970 + NSTimeInterval(delay))
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     
     func scheduleRestNotification(delay: Int) {
-        var notification = UILocalNotification()
+        let notification = UILocalNotification()
         notification.alertBody = NSLocalizedString("Great work! Time to have a rest!", comment: "")
         notification.fireDate = NSDate(timeIntervalSince1970: NSDate().timeIntervalSince1970 + NSTimeInterval(delay))
         UIApplication.sharedApplication().scheduleLocalNotification(notification)

@@ -35,7 +35,7 @@ class SideViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("TomatoCell") as! TomatoCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TomatoCell") as! TomatoCell
         cell.object = data[indexPath.row]
         return cell
     }

@@ -35,14 +35,14 @@ class MemoryManager {
             
             var array = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as! [HistoryObject]
             if (array.count > 0) {
-                var lastObject: HistoryObject! = array.last
+                let lastObject: HistoryObject! = array.last
                 
                 if (lastObject.date.isEqualToDate(date)) {
                     lastObject.tomatosCount++
                     defaults.setObject(NSKeyedArchiver.archivedDataWithRootObject(array), forKey:UDHistory)
                     postUpdateTomatoNotifcation()
                 } else {
-                    var object = HistoryObject()
+                    let object = HistoryObject()
                     object.date = date
                     object.tomatosCount = 1
                     array.append(object)
@@ -50,7 +50,7 @@ class MemoryManager {
                     postAddTomatoNotifcation(object)
                 }
             } else {
-                var object = HistoryObject()
+                let object = HistoryObject()
                 object.date = date
                 object.tomatosCount = 1
                 array.append(object)
@@ -60,7 +60,7 @@ class MemoryManager {
         } else {
             
             var array = [HistoryObject]()
-            var object = HistoryObject()
+            let object = HistoryObject()
             object.date = date
             object.tomatosCount = 1
             array.append(object)
@@ -107,9 +107,9 @@ class MemoryManager {
     // MARK: - General Methods -
     
     func getTodayDate() -> NSDate {
-        var cal = NSCalendar.currentCalendar()
-        var date = NSDate()
-        var comps = cal.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay, fromDate:date)
+        let cal = NSCalendar.currentCalendar()
+        let date = NSDate()
+        let comps = cal.components([.Year, .Month, .Day], fromDate:date)
         return cal.dateFromComponents(comps)!
     }
     

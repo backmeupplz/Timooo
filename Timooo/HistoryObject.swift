@@ -22,7 +22,7 @@ class HistoryObject: NSObject, NSCoding {
     
     // MARK: - NSCoding -
     
-    required convenience init(coder decoder: NSCoder) {
+    required convenience init?(coder decoder: NSCoder) {
         self.init()
         self.tomatosCount = decoder.decodeObjectForKey("tomatosCount") as! Int
         self.date = decoder.decodeObjectForKey("date") as! NSDate

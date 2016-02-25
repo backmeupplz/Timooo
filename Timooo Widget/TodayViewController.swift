@@ -34,11 +34,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         defaults.addObserver(self, forKeyPath: "timerText", options: .New, context: nil)
     }
     
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
         
         if (keyPath == "timerText") {
-            timerLabel.text = change[NSKeyValueChangeNewKey] as? String
+            timerLabel.text = change![NSKeyValueChangeNewKey] as? String
         }
     }
 }

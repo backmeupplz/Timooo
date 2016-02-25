@@ -25,10 +25,10 @@ class ContainerViewController: LGSideMenuController {
     // MARK: - General Functions -
     
     func setupSideMenu() {
-        setRootViewController(storyboard!.instantiateViewControllerWithIdentifier("MainViewController") as! UIViewController)
-        sideViewController = storyboard!.instantiateViewControllerWithIdentifier("SideViewController") as! UIViewController
-        
-        setLeftViewEnabledWithWidth(CGFloat(260), presentationStyle: LGSideMenuPresentationStyleSlideBelow, alwaysVisibleOptions: LGSideMenuAlwaysVisibleOnNone)
-        leftView().addSubview(sideViewController.view)
+//        setRootViewController(storyboard!.instantiateViewControllerWithIdentifier("MainViewController") as! UIViewController)
+//        sideViewController = storyboard!.instantiateViewControllerWithIdentifier("SideViewController") 
+//        
+//        setLeftViewEnabledWithWidth(CGFloat(260), presentationStyle: LGSideMenuPresentationStyleSlideBelow, alwaysVisibleOptions: LGSideMenuAlwaysVisibleOnNone)
+//        leftView().addSubview(sideViewController.view)
     }
 }

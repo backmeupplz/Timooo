@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PX2-Qn-i3J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B41-E6-qqS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -29,8 +30,10 @@
                                 <color key="sectionIndexBackgroundColor" red="0.97647058819999999" green="0.86274509799999999" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TomatoCell" id="Hs1-8f-40X" customClass="TomatoCell" customModule="Timooo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="260" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hs1-8f-40X" id="FDl-zV-QcU">
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tomato" translatesAutoresizingMaskIntoConstraints="NO" id="P1y-FP-JdE">
@@ -140,6 +143,61 @@
             </objects>
             <point key="canvasLocation" x="378" y="-14"/>
         </scene>
+        <!--Purchase View Controller-->
+        <scene sceneID="LSw-z5-ag3">
+            <objects>
+                <viewController id="B41-E6-qqS" customClass="PurchaseViewController" customModule="Timooo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yJ5-wn-2L3"/>
+                        <viewControllerLayoutGuide type="bottom" id="N7I-Ee-BIa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="88w-2C-w9a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" adType="mediumRect" translatesAutoresizingMaskIntoConstraints="NO" id="Dbh-3m-SUu">
+                                <rect key="frame" x="150" y="175" width="300" height="250"/>
+                            </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUT-d0-I58">
+                                <rect key="frame" x="246" y="285" width="108" height="30"/>
+                                <state key="normal" title="Buy Immortality"/>
+                                <connections>
+                                    <action selector="buyImmortalityTouched:" destination="B41-E6-qqS" eventType="touchUpInside" id="Uiz-vB-ZdX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wux-bA-ye4">
+                                <rect key="frame" x="236" y="323" width="128" height="30"/>
+                                <state key="normal" title="Restore purchases"/>
+                                <connections>
+                                    <action selector="restoreTouched:" destination="B41-E6-qqS" eventType="touchUpInside" id="LdP-9o-nlL"/>
+                                </connections>
+                            </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="nNk-iP-vqL">
+                                <rect key="frame" x="60" y="441" width="480" height="66"/>
+                            </adBannerView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="66A-Ue-gC1">
+                                <rect key="frame" x="60" y="95" width="480" height="66"/>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dbh-3m-SUu" firstAttribute="centerX" secondItem="88w-2C-w9a" secondAttribute="centerX" id="4ih-YX-5eq"/>
+                            <constraint firstItem="nNk-iP-vqL" firstAttribute="centerX" secondItem="88w-2C-w9a" secondAttribute="centerX" id="9wI-00-gVr"/>
+                            <constraint firstItem="Dbh-3m-SUu" firstAttribute="top" secondItem="66A-Ue-gC1" secondAttribute="bottom" constant="14" id="Heb-Nq-5ho"/>
+                            <constraint firstItem="66A-Ue-gC1" firstAttribute="centerX" secondItem="88w-2C-w9a" secondAttribute="centerX" id="IMa-mI-F8e"/>
+                            <constraint firstItem="Dbh-3m-SUu" firstAttribute="centerY" secondItem="88w-2C-w9a" secondAttribute="centerY" id="LKW-ed-gAl"/>
+                            <constraint firstItem="Wux-bA-ye4" firstAttribute="centerX" secondItem="88w-2C-w9a" secondAttribute="centerX" id="SpT-fF-xi1"/>
+                            <constraint firstItem="nNk-iP-vqL" firstAttribute="top" secondItem="Dbh-3m-SUu" secondAttribute="bottom" constant="16" id="eDf-xD-ire"/>
+                            <constraint firstItem="AUT-d0-I58" firstAttribute="centerY" secondItem="88w-2C-w9a" secondAttribute="centerY" id="pSm-L0-Obw"/>
+                            <constraint firstItem="AUT-d0-I58" firstAttribute="centerX" secondItem="88w-2C-w9a" secondAttribute="centerX" id="rxj-WQ-Y7W"/>
+                            <constraint firstItem="Wux-bA-ye4" firstAttribute="top" secondItem="AUT-d0-I58" secondAttribute="bottom" constant="8" id="u4O-3e-c8q"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3g-EE-Q4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="-685"/>
+        </scene>
         <!--Container View Controller-->
         <scene sceneID="7TU-Dc-R0q">
             <objects>
@@ -231,10 +289,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udl-0x-F6L" userLabel="Container">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udl-0x-F6L" userLabel="Container">
                                 <rect key="frame" x="0.0" y="398" width="600" height="202"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-Zw-F75" userLabel="Buttons View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-Zw-F75" userLabel="Buttons View">
                                         <rect key="frame" x="150" y="8" width="300" height="194"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4m-cb-TQf" userLabel="Stop Button">
@@ -351,7 +409,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qv-4L-uAW">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qv-4L-uAW">
                                 <rect key="frame" x="0.0" y="20" width="38" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Zf2-eC-rTi"/>
@@ -366,7 +424,7 @@
                                     <action selector="toggleSideMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mOa-cI-yAJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CN-hG-xzL">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CN-hG-xzL">
                                 <rect key="frame" x="563" y="20" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="1ga-Mo-ETf"/>
@@ -390,7 +448,7 @@
                                     <action selector="toggleSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1C-qS-rWm"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-eT-kUS" userLabel="Options View" customClass="TomatoView" customModule="Timooo" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-eT-kUS" userLabel="Options View" customClass="TomatoView" customModule="Timooo" customModuleProvider="target">
                                 <rect key="frame" x="556" y="157" width="36" height="285"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-PH-86S" customClass="TomatoButton" customModule="Timooo" customModuleProvider="target">

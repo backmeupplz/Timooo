@@ -46,7 +46,7 @@ class TimerCircle: UIView {
     }
     
     func drawCircles() {
-        var context: CGContextRef = UIGraphicsGetCurrentContext()
+        let context: CGContextRef = UIGraphicsGetCurrentContext()!
         
         CGContextSetLineWidth(context, lineWidth);
         CGContextBeginPath(context);
@@ -61,7 +61,7 @@ class TimerCircle: UIView {
         CGContextClosePath(context);
         
         CGContextSetStrokeColorWithColor(context, color.CGColor);
-        CGContextDrawPath(context, kCGPathStroke);
+        CGContextDrawPath(context, CGPathDrawingMode.Stroke);
         
         CGContextSetLineWidth(context, lineWidth/2);
         CGContextBeginPath(context);
@@ -80,7 +80,7 @@ class TimerCircle: UIView {
         CGContextAddArc(context, x, y, radius, start, end, 0);
         
         CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor);
-        CGContextDrawPath(context, kCGPathStroke);
+        CGContextDrawPath(context, CGPathDrawingMode.Stroke);
     }
     
     // MARK: - Notifications -

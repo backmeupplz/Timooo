@@ -33,6 +33,9 @@
 		B3F6D0ED1B4B4CCB00620808 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F6D0EC1B4B4CCB00620808 /* MainInterface.storyboard */; };
 		B3F6D0F01B4B4CCB00620808 /* Timooo Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B3F6D0E41B4B4CCA00620808 /* Timooo Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3F6D0F81B4B55B700620808 /* TodayExtensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F6D0F71B4B55B700620808 /* TodayExtensionManager.swift */; };
+		B3FA90F91C7F7771003583EC /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA90F81C7F7771003583EC /* PurchaseViewController.swift */; };
+		B3FA90FB1C7F85A9003583EC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FA90FA1C7F85A9003583EC /* AdSupport.framework */; };
+		B3FA90FD1C7F85E7003583EC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FA90FC1C7F85E7003583EC /* iAd.framework */; };
 		B3FCDDB31AA52F8B001CEA3E /* TomatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +110,9 @@
 		B3F6D0F51B4B545800620808 /* Timooo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Timooo.entitlements; sourceTree = "<group>"; };
 		B3F6D0F61B4B553E00620808 /* Timooo Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Timooo Widget.entitlements"; sourceTree = "<group>"; };
 		B3F6D0F71B4B55B700620808 /* TodayExtensionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayExtensionManager.swift; sourceTree = "<group>"; };
+		B3FA90F81C7F7771003583EC /* PurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		B3FA90FA1C7F85A9003583EC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B3FA90FC1C7F85E7003583EC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		B3FCDDB21AA52F8B001CEA3E /* TomatoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomatoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FA90FD1C7F85E7003583EC /* iAd.framework in Frameworks */,
+				B3FA90FB1C7F85A9003583EC /* AdSupport.framework in Frameworks */,
 				B3C726EE1AA5588B0034EACD /* AVFoundation.framework in Frameworks */,
 				A7F4C04E39AE56AEB03C4795 /* libPods.a in Frameworks */,
 			);
@@ -141,6 +149,8 @@
 		0009E667C30A245F833288D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3FA90FC1C7F85E7003583EC /* iAd.framework */,
+				B3FA90FA1C7F85A9003583EC /* AdSupport.framework */,
 				B3C726ED1AA5588B0034EACD /* AVFoundation.framework */,
 				B3F6D0E51B4B4CCA00620808 /* NotificationCenter.framework */,
 				16D80CD4E152389F1F4FC164 /* libPods.a */,
@@ -244,6 +254,7 @@
 				B36FAD6A1BA8D289007F8439 /* ContainerViewController.swift */,
 				B33579061A9C246D002BF317 /* MainViewController.swift */,
 				B320B9341AA6837D00CC04B2 /* SideViewController.swift */,
+				B3FA90F81C7F7771003583EC /* PurchaseViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 				B33578FD1A9C246D002BF317 /* Resources */,
 				78363B971A157164608F5C4F /* Copy Pods Resources */,
 				B3F6D0F41B4B4CCB00620808 /* Embed App Extensions */,
+				D8AF04C03EFF7237487B49BE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,7 +362,9 @@
 		B33578F71A9C246D002BF317 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Borodutch Studio LLC";
 				TargetAttributes = {
 					B33578FE1A9C246D002BF317 = {
@@ -443,6 +457,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D8AF04C03EFF7237487B49BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F36343426635A9F0744F2958 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C726E81AA5527B0034EACD /* TimerSlider.swift in Sources */,
+				B3FA90F91C7F7771003583EC /* PurchaseViewController.swift in Sources */,
 				B320B9391AA68CDB00CC04B2 /* TomatoCell.swift in Sources */,
 				B36E5C011AA001750021CF0B /* TomatoButton.swift in Sources */,
 				B398F00A1A9D7B1300981196 /* TimerLabel.swift in Sources */,
@@ -565,6 +595,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -635,6 +666,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Timooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Kolmogorov.Po-Pomodoro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Timooo/Timooo-Bridging-Header.h";
@@ -653,6 +685,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Timooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Kolmogorov.Po-Pomodoro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Timooo/Timooo-Bridging-Header.h";
@@ -673,6 +706,7 @@
 				);
 				INFOPLIST_FILE = TimoooTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BorodutchStudio.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timooo.app/Timooo";
 			};
@@ -688,6 +722,7 @@
 				);
 				INFOPLIST_FILE = TimoooTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BorodutchStudio.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timooo.app/Timooo";
 			};
@@ -708,6 +743,7 @@
 				INFOPLIST_FILE = "Timooo Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Kolmogorov.Po-Pomodoro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -726,6 +762,7 @@
 				INFOPLIST_FILE = "Timooo Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Kolmogorov.Po-Pomodoro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;

@@ -35,7 +35,7 @@ class TodayExtensionManager {
     }
     
     func receivedTimeNotification(notification: NSNotification) {
-        var text = notification.userInfo![newValueKey] as? String
+        let text = notification.userInfo![newValueKey] as? String
         
         defaults.setObject(text, forKey: "timerText")
     }

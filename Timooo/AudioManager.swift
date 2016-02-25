@@ -24,7 +24,7 @@ class AudioManager {
     
     init() {
         let soundURL = NSBundle.mainBundle().URLForResource("sound", withExtension: "wav")
-        audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+        audioPlayer = try? AVAudioPlayer(contentsOfURL: soundURL!)
         audioPlayer.prepareToPlay()
         enabled = MemoryManager.sharedInstance.getAudioManagerState()
     }

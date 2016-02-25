@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         UIApplication.sharedApplication().cancelAllLocalNotifications()
-        println("App got terminated");
+        print("App got terminated");
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
@@ -46,8 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func registerForNotifications(application: UIApplication) {
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound |
-            UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [UIUserNotificationType.Sound, UIUserNotificationType.Alert, UIUserNotificationType.Badge], categories: nil))
     }
 }
 
